@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ 'info-cards.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'info-cards.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="info-cards">
+<div class="info-cards flex page-width">
   {%- for block in section.blocks -%}
     <div class="card">
       <h4>{{ block.settings.title }}</h4>
@@ -11,48 +11,44 @@
 </div>
 
 {% schema %}
-{
-  "name": "t:sections.info-cards.name",
-  "class": "section",
-  "tag": "section",
-  "blocks": [
-    {
-      "type": "card",
-      "name": "t:sections.info-cards.blocks.card.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "default": "Questions",
-          "label": "t:sections.info-cards.blocks.card.settings.title.label"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "default": "We are here to help, contact via info@livehealthy.com.hk",
-          "label": "t:sections.info-cards.blocks.card.settings.text.label"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "t:sections.info-cards.presets.name",
-      "blocks": [
-        {
-          "type": "card"
-        },
-        {
-          "type": "card"
-        },
-        {
-          "type": "card"
-        },
-        {
-          "type": "card"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "t:sections.info-cards.name",
+    "class": "section",
+    "tag": "section",
+    "blocks": [
+      {
+        "type": "card",
+        "name": "t:sections.info-cards.blocks.card.name",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "default": "Questions",
+            "label": "t:sections.info-cards.blocks.card.settings.title.label"
+          }, {
+            "type": "text",
+            "id": "text",
+            "default": "We are here to help, contact via info@livehealthy.com.hk",
+            "label": "t:sections.info-cards.blocks.card.settings.text.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.info-cards.presets.name",
+        "blocks": [
+          {
+            "type": "card"
+          }, {
+            "type": "card"
+          }, {
+            "type": "card"
+          }, {
+            "type": "card"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}

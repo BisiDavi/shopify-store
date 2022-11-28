@@ -1,0 +1,23 @@
+
+.info-cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top:20px;
+  gap:20px;
+}
+
+.card{
+    border: 1px solid black;
+    padding:20px;
+    border-radius: 20px;
+}
+
+.card h4{
+    font-size: 18px;
+    font-weight: bold;
+    margin:0px;
+}
+
+.card p{
+    margin:15px 0px 5px 0px;
+}
