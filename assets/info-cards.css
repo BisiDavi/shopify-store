@@ -15,9 +15,10 @@
 .card h4{
     font-size: 18px;
     font-weight: bold;
-    margin:0px;
+    margin:10px 0px 0px 0px;
 }
 
 .card p{
-    margin:15px 0px 5px 0px;
+    margin:10px 0px 5px 0px;
+    line-height: 1.2;
 }

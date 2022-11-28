@@ -10,9 +10,9 @@
        elsif block.settings.title == 'Delivery' 
          render 'card-icon-delivery' 
        elsif block.settings.title == 'Quality Guarantee' 
-        render 'card-icon-delivery'
+        render 'card-icon-quality'
        else 
-        render 'card-icon-delivery' 
+        render 'card-icon-payment' 
        endif 
         -%}
       <h4>{{ block.settings.title }}</h4>
