@@ -255,9 +255,9 @@ html.no-js .no-js-hidden {
 }
 
 @media screen and (min-width: 750px) {
-  .page-width {
+  /* .page-width {
     padding: 0 5rem;
-  }
+  } */
 
   .page-width--narrow {
     padding: 0 9rem;
@@ -2995,12 +2995,19 @@ details-disclosure > details {
 }
 
 /* styles by me */
+header.header {
+  display: flex;
+}
 .header-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .top-header {
   display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .site-button {
@@ -3010,4 +3017,11 @@ details-disclosure > details {
   border: none;
   border-radius: 10px;
   font-size: 16px;
+}
+
+.top-header nav.header__inline-menu {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-around;
 }
