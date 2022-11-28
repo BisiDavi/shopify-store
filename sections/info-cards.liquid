@@ -2,13 +2,59 @@
 <noscript>{{ 'info-cards.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="info-cards">
-  <div class="card"></div>
+  {%- for block in section.blocks -%}
+    <div class="card">
+      <h4>{{ block.settings.title }}</h4>
+      <p>{{ block.settings.text }}</p>
+    </div>
+  {%- endfor -%}
 </div>
 
 {% schema %}
 {
   "name": "t:sections.info-cards.name",
+  "class": "section",
   "tag": "section",
-  "class": "section"
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Questions",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "We are here to help, contact via info@livehealthy.com.hk",
+          "label": "Text"
+        }
+      ],
+      "default": "Cards",
+      "label": "Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}

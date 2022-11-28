@@ -43,6 +43,40 @@
         "show_text_below": false
       }
     },
+    "info_cards": {
+      "type": "info-cards",
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "Questions",
+            "text": "We are here to help, contact via info@livehealthy.com.hk"
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "Delivery",
+            "text": "Free Shipping Australia to Hong Kong"
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "title": "Quality Guarantee",
+            "text": "Guaranteed genuine Aussie imports"
+          }
+        },
+        "card4": {
+          "type": "card",
+          "settings": {
+            "title": "Payment methods",
+            "text": "FPS, HK Bank Transfer or Paypal"
+          }
+        }
+      },
+      "block_order": ["card1", "card2", "card3", "card4"]
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -83,7 +117,7 @@
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 28,
         "padding_bottom": 36
       }
@@ -187,6 +221,7 @@
   },
   "order": [
     "image_banner",
+    "info_cards",
     "rich_text",
     "featured_collection",
     "collage",
