@@ -4,6 +4,17 @@
 <div class="info-cards flex page-width">
   {%- for block in section.blocks -%}
     <div class="card">
+      {%- liquid
+        if block.settings.title == 'Questions' 
+         render 'card-icon-question' 
+       elsif block.settings.title == 'Delivery' 
+         render 'card-icon-delivery' 
+       elsif block.settings.title == 'Quality Guarantee' 
+        render 'card-icon-delivery'
+       else 
+        render 'card-icon-delivery' 
+       endif 
+        -%}
       <h4>{{ block.settings.title }}</h4>
       <p>{{ block.settings.text }}</p>
     </div>
@@ -39,8 +50,6 @@
         "name": "t:sections.info-cards.presets.name",
         "blocks": [
           {
-            "type": "card"
-          }, {
             "type": "card"
           }, {
             "type": "card"
