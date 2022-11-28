@@ -3,7 +3,7 @@
 
 <div class="info-cards flex page-width">
   {%- for block in section.blocks -%}
-    <div class="card">
+    <div class="card color-{{ block.settings.color_scheme }} gradient">
       {%- liquid
         if block.settings.title == 'Questions' 
          render 'card-icon-question' 
@@ -22,42 +22,81 @@
 </div>
 
 {% schema %}
-  {
-    "name": "t:sections.info-cards.name",
-    "class": "section",
-    "tag": "section",
-    "blocks": [
-      {
-        "type": "card",
-        "name": "t:sections.info-cards.blocks.card.name",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "default": "Questions",
-            "label": "t:sections.info-cards.blocks.card.settings.title.label"
-          }, {
-            "type": "text",
-            "id": "text",
-            "default": "We are here to help, contact via info@livehealthy.com.hk",
-            "label": "t:sections.info-cards.blocks.card.settings.text.label"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "t:sections.info-cards.presets.name",
-        "blocks": [
-          {
-            "type": "card"
-          }, {
-            "type": "card"
-          }, {
-            "type": "card"
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "t:sections.info-cards.name",
+  "class": "section",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "card",
+      "name": "t:sections.info-cards.blocks.card.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Questions",
+          "label": "t:sections.info-cards.blocks.card.settings.title.label"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "We are here to help, contact via info@livehealthy.com.hk",
+          "label": "t:sections.info-cards.blocks.card.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "t:sections.all.colors.accent_1.label"
+            },
+            {
+              "value": "accent-2",
+              "label": "t:sections.all.colors.accent_2.label"
+            },
+            {
+              "value": "lemon-green",
+              "label": "Lemon Green"
+            },
+            {
+              "value": "sky-blue",
+              "label": "Sky Blue"
+            },
+            {
+              "value": "light-orange",
+              "label": "Light Orange"
+            },
+            {
+              "value": "light-pink",
+              "label": "Light Pink"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "default": "accent-1",
+          "label": "t:sections.all.colors.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.info-cards.presets.name",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
