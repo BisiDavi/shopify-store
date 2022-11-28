@@ -2650,28 +2650,22 @@
     },
     "info-cards": {
       "name": "Info Cards",
-      "cards": [
-        {
-          "icon": "questions",
-          "title": "Questions",
-          "text": "We are here to help, contact via info@livehealthy.com.hk"
-        },
-        {
-          "icon": "delivery",
-          "title": "Delivery",
-          "text": "Free Shipping Australia to Hong Kong"
-        },
-        {
-          "icon": "quality",
-          "title": "Quality Guarantee",
-          "text": "Guaranteed genuine Aussie imports"
-        },
-        {
-          "icon": "payment",
-          "title": "Payment methods",
-          "text": "FPS, HK Bank Transfer or Paypal"
+      "blocks": {
+        "card": {
+          "name": "Card",
+          "settings": {
+            "title": {
+              "label": "Title"
+            },
+            "text": {
+              "label": "Description"
+            }
+          }
         }
-      ]
+      },
+      "presets": {
+        "name": "Info Cards"
+      }
     },
     "slideshow": {
       "name": "Slideshow",
