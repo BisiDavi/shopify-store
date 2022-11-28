@@ -397,7 +397,7 @@
         {%- if section.settings.menu != blank -%}
           {%- if section.settings.menu_type_desktop == 'dropdown' -%}
             <nav class="header__inline-menu">
-              <div>
+              <div class="whatsapp-number">
                 {%- render 'icon-whatsapp' -%} 
                 <p> {{ section.settings.whatsapp_number }} </p></div>
               <ul class="list-menu list-menu--inline" role="list">
@@ -630,7 +630,9 @@
         </div>
       </div>
       <div class="secondary-header">
-        <button class="site-button">All Categories</button>
+        <button class="site-button">
+          {%- render 'menu-hamburger-icon' -%}
+          All Categories</button>
       </div>
     </div>
   </header>

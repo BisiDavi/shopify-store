@@ -3025,3 +3025,13 @@ header.header {
   width: 50%;
   justify-content: space-around;
 }
+
+.whatsapp-number {
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-number svg {
+  height: 20px;
+  margin-right: 5px;
+}
