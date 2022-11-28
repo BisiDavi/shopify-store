@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="{{ 'info-cards.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'info-cards.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="info-cards">
+  <div class="card"></div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.info-cards.name",
+  "tag": "section",
+  "class": "section"
+}
+{% endschema %}

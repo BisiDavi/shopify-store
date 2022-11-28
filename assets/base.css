@@ -3017,6 +3017,8 @@ header.header {
   border: none;
   border-radius: 10px;
   font-size: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .top-header nav.header__inline-menu {
