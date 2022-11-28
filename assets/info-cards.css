@@ -3,11 +3,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top:20px;
-  gap:40px;
+  gap:35px;
 }
 
 .card{
-    border: 1px solid black;
     padding:20px;
     border-radius: 20px;
 }
