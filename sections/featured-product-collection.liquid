@@ -1,7 +1,7 @@
 <div class="collection-group">
   {%- for block in section.blocks -%}
     <div class="collection">
-      {%- render 'featured-product-collection'
+      {%- render 'product-collection'
         , collection_title: block.settings.title
         , collection_color_scheme: block.settings.color_scheme
         -%}
@@ -59,6 +59,22 @@
             }
           ],
           "label": "t:sections.all.colors.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Collection Preset",
+      "blocks": [
+        {
+          "type": "product-collection"
+        },
+        {
+          "type": "product-collection"
+        },
+        {
+          "type": "product-collection"
         }
       ]
     }
