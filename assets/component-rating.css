@@ -58,3 +58,9 @@
     display: block;
   }
 }
+
+/* styles by me */
+.product-name{
+  border-left: 3px solid;
+  padding-left:10px;
+}
