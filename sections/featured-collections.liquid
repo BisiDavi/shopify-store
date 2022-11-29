@@ -1,23 +1,24 @@
 <div class="collection-group">
   {%- for block in section.blocks -%}
-    <div class="collection">
-      {%- render 'product-collection'
-        , collection_title: block.settings.title
-        , collection_color_scheme: block.settings.color_scheme
-        -%}
+    <div class="collection" id="collection-{{ forloop.index }}">
+      <h4>{{ block.settings.title }}</h4>
+      {% render 'product-slider'
+       , collection_title: block.settings.title
+       , collection_color_scheme: block.settings.color_scheme
+       %}
     </div>
   {%- endfor -%}
 </div>
 
 {% schema %}
 {
-  "name": "Featured Product Collection",
+  "name": "Featured Collections",
   "class": "section",
   "tag": "section",
   "blocks": [
     {
       "type": "product-collection",
-      "name": "Product Collection Group",
+      "name": "Product Collection",
       "settings": [
         {
           "type": "text",
