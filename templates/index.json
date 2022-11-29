@@ -79,8 +79,7 @@
           }
         }
       },
-      "block_order": ["card1", "card2", "card3", "card4"],
-      "settings": {}
+      "block_order": ["card1", "card2", "card3", "card4"]
     },
     "featured_collections": {
       "type": "featured-collections",
@@ -111,13 +110,12 @@
         "show_rating": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 10,
-        "padding_bottom": 10
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "shipping_banner": {
-      "type": "shipping-banner",
-      "settings": {}
+      "type": "shipping-banner"
     },
     "collage": {
       "type": "collage",
