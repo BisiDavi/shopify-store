@@ -1,0 +1,67 @@
+<div class="collection-group">
+  {%- for block in section.blocks -%}
+    <div class="collection">
+      {%- render 'featured-product-collection'
+        , collection_title: block.settings.title
+        , collection_color_scheme: block.settings.color_scheme
+        -%}
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Featured Product Collection",
+  "class": "section",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "product-collection",
+      "name": "Product Collection Group",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Collection Title",
+          "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "t:sections.all.colors.accent_1.label"
+            },
+            {
+              "value": "accent-2",
+              "label": "t:sections.all.colors.accent_2.label"
+            },
+            {
+              "value": "lemon-green",
+              "label": "Lemon Green"
+            },
+            {
+              "value": "sky-blue",
+              "label": "Sky Blue"
+            },
+            {
+              "value": "light-orange",
+              "label": "Light Orange"
+            },
+            {
+              "value": "light-pink",
+              "label": "Light Pink"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "label": "t:sections.all.colors.label"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
