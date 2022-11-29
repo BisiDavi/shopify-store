@@ -50,58 +50,37 @@
           "type": "card",
           "settings": {
             "title": "Questions",
-            "text": "We are here to help, contact via info@livehealthy.com.hk"
+            "text": "We are here to help, contact via info@livehealthy.com.hk",
+            "color_scheme": "lemon-green"
           }
         },
         "card2": {
           "type": "card",
           "settings": {
             "title": "Delivery",
-            "text": "Free Shipping Australia to Hong Kong"
+            "text": "Free Shipping Australia to Hong Kong",
+            "color_scheme": "sky-blue"
           }
         },
         "card3": {
           "type": "card",
           "settings": {
             "title": "Quality Guarantee",
-            "text": "Guaranteed genuine Aussie imports"
+            "text": "Guaranteed genuine Aussie imports",
+            "color_scheme": "light-orange"
           }
         },
         "card4": {
           "type": "card",
           "settings": {
             "title": "Payment methods",
-            "text": "FPS, HK Bank Transfer or Paypal"
+            "text": "FPS, HK Bank Transfer or Paypal",
+            "color_scheme": "light-pink"
           }
         }
       },
       "block_order": ["card1", "card2", "card3", "card4"],
       "settings": {}
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Talk about your brand</p>",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": ["heading", "text"],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
     },
     "featured_collections": {
       "type": "featured-collections",
@@ -109,11 +88,17 @@
         "collection1": {
           "type": "product-collection",
           "settings": {
-            "title": "Collection 1"
+            "title": "Weight Loss"
+          }
+        },
+        "collection2": {
+          "type": "product-collection",
+          "settings": {
+            "title": "Sport Nutrition"
           }
         }
       },
-      "block_order": ["collection1"],
+      "block_order": ["collection1", "collection2"],
       "settings": {
         "collection": "all",
         "products_to_show": 8,
@@ -126,8 +111,8 @@
         "show_rating": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 36
+        "padding_top": 10,
+        "padding_bottom": 10
       }
     },
     "collage": {
@@ -230,7 +215,6 @@
   "order": [
     "image_banner",
     "info_cards",
-    "rich_text",
     "featured_collections",
     "collage",
     "video",
