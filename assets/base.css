@@ -3021,6 +3021,10 @@ header.header {
   align-items: center;
 }
 
+.site-button svg{
+  margin-right: 5px;
+}
+
 .top-header nav.header__inline-menu {
   display: flex;
   align-items: center;

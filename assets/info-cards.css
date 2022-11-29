@@ -11,6 +11,10 @@
     border-radius: 20px;
 }
 
+.card:hover{
+    opacity: 0.8;
+}
+
 .card h4{
     font-size: 18px;
     font-weight: bold;
