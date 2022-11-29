@@ -115,6 +115,10 @@
         "padding_bottom": 10
       }
     },
+    "shipping_banner": {
+      "type": "shipping-banner",
+      "settings": {}
+    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -216,6 +220,7 @@
     "image_banner",
     "info_cards",
     "featured_collections",
+    "shipping_banner",
     "collage",
     "video",
     "multicolumn"

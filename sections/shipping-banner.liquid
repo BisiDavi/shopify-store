@@ -1,0 +1,26 @@
+<div class="shipping-banner page-width"></div>
+{%- if section.settings.shipping_banner != blank -%}
+  {%- assign img_alt = "shipping banner%" -%}
+  {%- assign img_height = "100%" -%}
+  {{ section.settings.shipping_banner | image_url: width: 500 | image_tag:
+   class: 'header__heading-logo'
+   , widths: '50, 100, 150, 200, 250, 300, 400, 500'
+   , height: img_height
+   , width: section.settings.logo_width
+   , alt: img_alt
+   }}
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Shipping Banner",
+    "class": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "shipping_banner",
+        "label": "Upload Shipping banner"
+      }
+    ]
+  }
+{% endschema %}

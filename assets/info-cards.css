@@ -2,8 +2,9 @@
 .info-cards{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top:20px;
+  margin:40px auto 20px auto;
   gap:35px;
+  
 }
 
 .card{
