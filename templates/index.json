@@ -117,6 +117,24 @@
     "shipping_banner": {
       "type": "shipping-banner"
     },
+    "product_collage": {
+      "type": "product-collage",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 3,
+        "columns_desktop": 4,
+        "show_view_all": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -219,6 +237,7 @@
     "info_cards",
     "featured_collections",
     "shipping_banner",
+    "product_collage",
     "collage",
     "video",
     "multicolumn"

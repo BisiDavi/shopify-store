@@ -1,0 +1,35 @@
+.product-collage {
+    display:flex;
+    align-items: flex-start !important;
+    justify-content: space-between;
+}
+.products ul {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px !important;
+}
+
+.products ul li {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.collage-banner {
+    width:70%;
+}
+
+.collage-banner img{
+    width: 100%;
+}
+
+.products ul li .card.card--standard {
+    display:flex;
+    flex-direction: row;
+}
+
+.products ul li .card .card__inner {
+    margin-right: 10px;
+}
