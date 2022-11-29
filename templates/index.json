@@ -109,6 +109,7 @@
         "show_vendor": true,
         "show_rating": false,
         "columns_mobile": "2",
+        "enable_quick_add": true,
         "swipe_on_mobile": true,
         "padding_top": 12,
         "padding_bottom": 12
@@ -130,6 +131,7 @@
         "show_vendor": true,
         "show_rating": false,
         "columns_mobile": "2",
+        "enable_quick_add": true,
         "swipe_on_mobile": true,
         "padding_top": 4,
         "padding_bottom": 4
