@@ -20,3 +20,55 @@
 .tabs .collection {
   padding-top: 0px;
 }
+
+.tabs .card {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0px;
+  background-color: #f7f8fa;
+  padding: 0px;
+}
+
+.tabs .card__inner {
+  margin-right: 5px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.tabs .quick-add.no-js-hidden {
+  margin-left: 10px;
+  top: -10px;
+}
+
+.tabs .quick-add.no-js-hidden button.quick-add__submit {
+  display: flex;
+  min-height: 30px;
+  padding: 0px;
+  min-width: 60%;
+  max-width: 85%;
+}
+
+.tabs .card-wrapper.product-card-wrapper.underline-links-hover {
+  box-shadow: none;
+  border-radius: 20px;
+  background-color: #f7f8fa;
+  margin-right: 5px;
+}
+
+.tabs .card-wrapper.product-card-wrapper.underline-links-hover:hover .card {
+  box-shadow: none;
+  border-radius: 20px;
+  background-color: #ffe690;
+  padding: 0px;
+  width: 100%;
+}
+
+.tabs li.grid__item.slider__slide {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.tabs .card__media .media img {
+  border-radius: 10px;
+  background-color: white;
+}

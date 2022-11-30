@@ -211,7 +211,7 @@ button.quick-add__submit {
   min-width: 100%;
   box-sizing: border-box;
   background-color: var(--color-lemon-green);
-  border: none !important;
+  border: none;
   color: white;
   border-radius: 15px;
 }
