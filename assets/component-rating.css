@@ -30,7 +30,7 @@
 }
 
 .rating-star::before {
-  content: '★★★★★';
+  content: "★★★★★";
   background: linear-gradient(
     90deg,
     var(--color-icon) var(--percent),
@@ -60,7 +60,13 @@
 }
 
 /* styles by me */
-.product-name{
+.product-vendor {
   border-left: 3px solid;
-  padding-left:10px;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  font-size: 11px;
+}
+
+.product-name {
+  font-size: 16px;
 }

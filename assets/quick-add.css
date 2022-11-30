@@ -213,12 +213,20 @@ button.quick-add__submit {
   background-color: var(--color-lemon-green);
   border: none !important;
   color: white;
-  border-radius: 20px;
+  border-radius: 15px;
+}
+
+.button--secondary:after {
+  display: none;
 }
 
 button.quick-add__submit span {
   display: flex;
   align-items: center;
+}
+
+button.quick-add__submit span svg {
+  margin-right: 7px;
 }
 
 quick-add-modal .product-media-container.constrain-height {
