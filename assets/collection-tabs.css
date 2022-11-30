@@ -1,0 +1,22 @@
+.collection-tab {
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+
+.collection-tab .title {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 9%;
+  padding: 0px;
+}
+
+.collection-tab .title li {
+  margin-right: 50px;
+  list-style: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.tabs .collection {
+  padding-top: 0px;
+}
