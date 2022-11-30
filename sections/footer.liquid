@@ -393,7 +393,7 @@
           {
             "type": "text",
             "id": "heading",
-            "default": "Quick links",
+            "default": "About Livehealthy",
             "label": "t:sections.footer.blocks.link_list.settings.heading.label"
           }, {
             "type": "link_list",
@@ -459,9 +459,20 @@
     ],
     "settings": [
       {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Upload Logo"
+      },
+      {
+        "type": "text",
+        "id": "opening_hours",
+        "default": "Opening Hours: Mon- Sat: 9:00 am - 6:00 pm",
+        "label": "Opening Hours"
+      },
+      {
         "type": "text",
         "id": "about_us",
-        "default": "We are an online business operating out of Sydney, Australia. All products are shipped weekly from Sydney to Hong Kong.\u000aNo minimum orders for Hong Kong, shipping \u000avia HK Post, and SF Express.",
+        "default": "We are an online business operating out of Sydney, Australia. All products are shipped weekly from Sydney to Hong Kong.\nNo minimum orders for Hong Kong, shipping \nvia HK Post, and SF Express.",
         "label": "About us"
       },
       {
@@ -490,13 +501,11 @@
         ],
         "default": "background-1",
         "label": "t:sections.all.colors.label"
-      },
-      {
+      }, {
         "type": "header",
         "content": "t:sections.footer.settings.header__1.content",
         "info": "t:sections.footer.settings.header__1.info"
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "newsletter_enable",
         "default": true,
