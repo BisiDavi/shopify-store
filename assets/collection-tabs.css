@@ -72,3 +72,7 @@
   border-radius: 10px;
   background-color: white;
 }
+
+.tabs .caption-with-letter-spacing.light.product-vendor {
+  display: none;
+}
