@@ -71,9 +71,21 @@
   font-size: 16px;
 }
 
-.vendor-accent-1 {
-  color: var(--color-foreground);
+.vendor-deep-purple {
+  color: var(--color-deep-purple);
 }
-.vendor-lemon-green {
-  color: var(--color-lemon-green);
+.vendor-deep-red {
+  color: var(--color-deep-red);
+}
+
+.vendor-deep-green {
+  color: var(--color-deep-green);
+}
+
+.vendor-carton-brown {
+  color: var(--color-carton-brown);
+}
+
+.vendor-milk-pink {
+  color: var(--color-milk-pink);
 }
