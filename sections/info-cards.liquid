@@ -3,7 +3,7 @@
 
 <div class="info-cards flex page-width">
   {%- for block in section.blocks -%}
-    <div class="card color-{{ block.settings.color_scheme }} gradient">
+    <div class="card bg-{{ block.settings.color_scheme }} gradient">
       {%- liquid
         if block.settings.title == 'Questions' 
          render 'card-icon-question' 
@@ -56,8 +56,8 @@
               "label": "t:sections.all.colors.accent_2.label"
             },
             {
-              "value": "lemon-green",
-              "label": "Lemon Green"
+              "value": "light-green",
+              "label": "Light Green"
             },
             {
               "value": "sky-blue",

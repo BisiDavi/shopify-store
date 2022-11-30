@@ -24,3 +24,19 @@
   margin: 10px 0px 5px 0px;
   line-height: 1.2;
 }
+
+.bg-light-green {
+  background-color: var(--color-light-green);
+}
+
+.bg-sky-blue {
+  background-color: var(--color-sky-blue);
+}
+
+.bg-light-orange {
+  background-color: var(--color-light-orange);
+}
+
+.bg-light-pink {
+  background-color: var(--color-light-pink);
+}
