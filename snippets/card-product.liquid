@@ -13,7 +13,7 @@
   - section_id: {String} The ID of the section that contains this card.
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
-  - product_color_scheme: {String} product color scheme
+  - color_scheme: {String} product color scheme
   
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
@@ -140,7 +140,7 @@
         <div class="card__information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light product-vendor">{{ card_product.vendor }}</div>
+              <div class="caption-with-letter-spacing light product-vendor vendor-{{ color_scheme }}">{{ card_product.vendor }}</div>
             {%- endif -%}
           <h3
             class="card__heading product-name {% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"

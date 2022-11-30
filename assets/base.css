@@ -12,7 +12,6 @@
   --color-background: var(--color-base-background-2);
   --gradient-background: var(--gradient-base-background-2);
 }
- 
 
 .color-inverse {
   --color-foreground: var(--color-base-background-1);
@@ -3022,7 +3021,7 @@ header.header {
   align-items: center;
 }
 
-.site-button svg{
+.site-button svg {
   margin-right: 5px;
 }
 
@@ -3043,20 +3042,19 @@ header.header {
   margin-right: 5px;
 }
 
-
 /* colors */
-.color-lemon-green{
-  background-color: rgba(204, 240, 93, 0.5);
+.color-lemon-green {
+  background-color: var(--color-lemon-green);
 }
 
-.color-sky-blue{
- background-color:rgba(95, 177, 226, 0.5); 
+.color-sky-blue {
+  background-color: var(--color-sky-blue);
 }
 
-.color-light-orange{
-  background-color:rgba(252, 183, 98, 0.5);
+.color-light-orange {
+  background-color: var(--color-light-orange);
 }
 
-.color-light-pink{
-  background-color:rgba(226, 111, 198, 0.5) ;
+.color-light-pink {
+  background-color: var(--color-light-pink);
 }

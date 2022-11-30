@@ -1,28 +1,26 @@
-
-.info-cards{
+.info-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin:40px auto 20px auto;
-  gap:35px;
-  
+  margin: 40px auto 20px auto;
+  gap: 35px;
 }
 
-.card{
-    padding:20px;
-    border-radius: 20px;
+.card {
+  padding: 20px;
+  border-radius: 20px;
 }
 
-.card:hover{
-    opacity: 0.8;
+.card:hover {
+  opacity: 0.8;
 }
 
-.card h4{
-    font-size: 18px;
-    font-weight: bold;
-    margin:10px 0px 0px 0px;
+.card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0px 0px 0px;
 }
 
-.card p{
-    margin:10px 0px 5px 0px;
-    line-height: 1.2;
+.card p {
+  margin: 10px 0px 5px 0px;
+  line-height: 1.2;
 }
