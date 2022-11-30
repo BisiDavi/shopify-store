@@ -155,6 +155,25 @@
         "padding_top": 12,
         "padding_bottom": 12
       }
+    },
+    "collection_tabs": {
+      "type": "collectio-tabs",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "show_view_all": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "enable_quick_add": true,
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
     }
   },
   "order": [
@@ -163,6 +182,7 @@
     "featured_collections",
     "shipping_banner",
     "product_collage",
-    "best-seller"
+    "best-seller",
+    "collection_tabs"
   ]
 }
