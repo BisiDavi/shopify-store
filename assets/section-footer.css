@@ -39,6 +39,8 @@ footer.footer {
 
 .footer-column-2 {
   width: 70%;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .opening-hours {
@@ -176,7 +178,6 @@ footer.footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 3rem;
 }
 
 .footer-block--newsletter:only-child {
