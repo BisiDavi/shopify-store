@@ -1,13 +1,13 @@
-.slideshow__slide .slideshow__media.banner__media {
+.custom-slideshow .slideshow__slide .slideshow__media.banner__media {
   display: flex;
   justify-content: space-between;
 }
 
-.banner__media .content_text .slideshow__text {
+.custom-slideshow .banner__media .content_text .slideshow__text {
   position: relative;
 }
 
-.slideshow__media.banner__media .content_text {
+.custom-slideshow .slideshow__media.banner__media .content_text {
   width: 25%;
   max-width: 25%;
   height: 100%;
@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.slideshow__media.banner__media .content_image {
+.custom-slideshow .slideshow__media.banner__media .content_image {
   width: 75%;
   max-width: 75%;
   height: 100%;
@@ -24,8 +24,8 @@
   display: flex;
 }
 
-.banner__content,
-.slideshow__text.banner__box {
+.custom-slideshow .banner__content,
+.custom-slideshow .slideshow__text.banner__box {
   height: 100%;
   margin: 0px;
   padding: 0px;
