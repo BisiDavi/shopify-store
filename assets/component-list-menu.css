@@ -42,3 +42,7 @@
   display: flex;
   border: 1px solid black;
 }
+
+a.header__heading-link.link.link--text.focus-inset img {
+  max-width: 200px;
+}
