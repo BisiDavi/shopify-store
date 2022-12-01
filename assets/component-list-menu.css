@@ -28,3 +28,18 @@
   width: 10rem;
   padding: 0.5rem;
 }
+
+.secondary-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondary-menu {
+  display: flex;
+}
+
+.secondary-header .search {
+  width: 15%;
+  display: flex;
+  border: 1px solid black;
+}
