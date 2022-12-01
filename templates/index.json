@@ -28,6 +28,34 @@
         "change_slides_speed": 5
       }
     },
+    "custom_slideshow": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide": {
+          "type": "slide",
+          "settings": {
+            "heading": "Custom Image Slide",
+            "subheading": "Custom- Tell your brand's story through images",
+            "box_align": "middle-center"
+          }
+        },
+        "slide2": {
+          "type": "slide",
+          "settings": {
+            "heading": "Custom Image Slide 2",
+            "subheading": "Custom- Tell your brand's story through images",
+            "box_align": "middle-center"
+          }
+        }
+      },
+      "block_order": ["slide", "slide2"],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "auto_rotate": false,
+        "change_slides_speed": 5
+      }
+    },
     "info_cards": {
       "type": "info-cards",
       "blocks": {
@@ -169,6 +197,7 @@
   },
   "order": [
     "slideshow",
+    "custom_slideshow",
     "info_cards",
     "featured_collections",
     "shipping_banner",
