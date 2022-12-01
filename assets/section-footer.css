@@ -57,6 +57,26 @@ footer.footer {
   margin: 30px 0px;
 }
 
+.field {
+  border-bottom: 1px solid black;
+}
+
+.field__button {
+  font-weight: bold;
+}
+
+button#Subscribe.field__button:hover {
+  background-color: red;
+}
+
+.field input {
+  background-color: transparent;
+}
+
+.field:after {
+  box-shadow: none;
+}
+
 /* styles by me, end */
 
 .footer {
