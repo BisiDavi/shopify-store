@@ -1,6 +1,7 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
-{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'custom-slideshow.css' | asset_url | stylesheet_tag }}
 
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
@@ -80,7 +81,8 @@
       </style>
       <div class="slideshow__slide grid__item grid--1-col slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}" {{ block.shopify_attributes }} role="group" aria-roledescription="{{ 'sections.slideshow.slide' | t }}" aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" tabindex="-1">
         <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
-          {%- if block.settings.image -%}
+         
+            {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag:
              loading: 'lazy'
