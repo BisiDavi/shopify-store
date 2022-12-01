@@ -7,14 +7,16 @@
           "type": "slide",
           "settings": {
             "heading": "Image Slide",
-            "subheading": "Tell your brand's story through images"
+            "subheading": "Tell your brand's story through images",
+            "box_align": "middle-center"
           }
         },
         "slide2": {
           "type": "slide",
           "settings": {
             "heading": "Image Slide 2",
-            "subheading": "Tell your brand's story through images"
+            "subheading": "Tell your brand's story through images",
+            "box_align": "middle-center"
           }
         }
       },
@@ -99,7 +101,13 @@
       }
     },
     "shipping_banner": {
-      "type": "shipping-banner"
+      "type": "shipping-banner",
+      "blocks": {
+        "shipping-banner": {
+          "type": "shipping-banner"
+        }
+      },
+      "block_order": ["shipping-banner"]
     },
     "product_collage": {
       "type": "product-collage",
