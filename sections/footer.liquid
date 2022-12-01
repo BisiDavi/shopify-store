@@ -116,17 +116,18 @@
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
-                    <input id="NewsletterForm--{{ section.id }}" type="email" name="contact[email]" class="field__input" value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email"
+                    <input id="NewsletterForm--{{ section.id }}" type="email" placeholder="Enter your email" name="contact[email]" class="field__input" value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email"
                       {% if form.errors %}
                       autofocus
                       aria-invalid="true"
                       aria-describedby="ContactFooter-error"
                       {% elsif form.posted_successfully? %}
                       aria-describedby="ContactFooter-success"
+                      placeholder="Enter your email"
                       {% endif %}
-                      placeholder="{{ 'newsletter.label' | t }}" required>
+                      required>
                     <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                      {{ 'newsletter.label' | t }}
+                      Enter your email
                     </label>
                     <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
                       {% render 'icon-arrow' %}
@@ -423,7 +424,7 @@
       }, {
         "type": "text",
         "id": "newsletter_heading",
-        "default": "Subscribe to our emails",
+        "default": "Get deals in your inbox",
         "label": "t:sections.footer.settings.newsletter_heading.label"
       }, {
         "type": "header",

@@ -10,6 +10,10 @@ footer .footer__content-top {
   line-height: 20px;
 }
 
+.footer__blocks-wrapper {
+  width: 60%;
+}
+
 .footer-column-1 {
   margin-right: 20px;
 }
@@ -41,6 +45,7 @@ footer.footer {
   width: 70%;
   align-items: flex-start;
   justify-content: flex-end;
+  display: flex;
 }
 
 .opening-hours {
