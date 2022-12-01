@@ -5,6 +5,10 @@ footer .footer__content-top {
   justify-content: space-between;
 }
 
+.footer-block__heading {
+  font-weight: bold;
+}
+
 .footer-column-1 {
   font-size: 14px;
   line-height: 20px;
