@@ -1,0 +1,27 @@
+.banner__media {
+  display: flex;
+}
+
+.banner__media .content_text .slideshow__text {
+  position: relative;
+}
+
+.slideshow__media.banner__media .content_text {
+  width: 25%;
+  max-width: 25%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.slideshow__media.banner__media .content_image {
+  width: 75%;
+  max-width: 75%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.banner__content,
+.slideshow__text.banner__box {
+  height: 100%;
+  margin: 0px;
+}

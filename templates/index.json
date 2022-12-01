@@ -24,7 +24,7 @@
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 5
       }
     },
