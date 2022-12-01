@@ -1,7 +1,7 @@
 {
   "sections": {
     "slideshow": {
-      "type": "custom-slideshow",
+      "type": "slideshow",
       "blocks": {
         "slide": {
           "type": "slide",

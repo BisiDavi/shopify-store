@@ -113,25 +113,6 @@
             {%- endif -%}
           </div>
         </div>
-        {%- comment -%}
-          <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
-          {%- if block.settings.heading != blank -%}
-          <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
-          {%- endif -%}
-          {%- if block.settings.subheading != blank -%}
-          <div class="banner__text" {{ block.shopify_attributes }}>
-          <span>{{ block.settings.subheading | escape }}</span>
-          </div>
-          {%- endif -%}
-          {%- if block.settings.button_label != blank -%}
-          <div class="banner__buttons">
-          <a {% if block.settings.link %}href="{{ block.settings.link }}" {% else %} role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
-          </div>
-          {%- endif -%}
-          </div>
-          </div>
-        {%- endcomment -%}
       </div>
     {%- endfor -%}
   </div>
@@ -285,7 +266,7 @@
       {
         "type": "slide",
         "name": "t:sections.slideshow.blocks.slide.name",
-        "limit": 5,
+        "limit": 6,
         "settings": [
           {
             "type": "image_picker",
