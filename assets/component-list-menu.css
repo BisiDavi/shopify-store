@@ -39,7 +39,6 @@
 }
 
 .secondary-header .search {
-  width: 15%;
   display: flex;
   border: 1px solid black;
 }
