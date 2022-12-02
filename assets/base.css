@@ -1410,7 +1410,9 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button:focus:not(:focus-visible):not(.focused),
-.shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(.focused),
+.shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(
+    .focused
+  ),
 .shopify-payment-button
   [role="button"]:focus:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
@@ -3057,4 +3059,10 @@ header.header {
 
 .color-light-pink {
   background-color: var(--color-light-pink);
+}
+
+.header-wrapper {
+  background-color: white;
+  box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.01), 0px 6px 6px rgba(0, 0, 0, 0.02),
+    0px 2px 3px rgba(0, 0, 0, 0.03), 0px 0px 0px rgba(0, 0, 0, 0.03);
 }
