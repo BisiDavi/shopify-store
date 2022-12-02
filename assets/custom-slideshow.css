@@ -134,3 +134,19 @@ button.slider-counter__link--active .dot-view h4 {
 button.slider-counter__link--active .dot-view h2 {
   font-weight: bold;
 }
+
+.slideshow__text .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slideshow__text .title .tag {
+  background-color: white;
+  color: #ff7188;
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin: 0px;
+  font-weight: 600;
+}
