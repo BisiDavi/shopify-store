@@ -150,3 +150,28 @@ button.slider-counter__link--active .dot-view h2 {
   margin: 0px;
   font-weight: 600;
 }
+
+.slideshow__text .banner__buttons a {
+  background-color: #95bf11;
+  border: none;
+  box-shadow: none;
+  color: white;
+  padding: 0;
+  border-radius: 15px;
+  min-height: 40px;
+}
+
+.slideshow__text .banner__buttons a::after {
+  box-shadow: none;
+  color: white;
+  border-radius: 15px;
+}
+
+.slideshow__text .banner__buttons {
+  background-color: #95bf11;
+  color: white;
+  border: none;
+  box-shadow: none;
+  border-radius: 15px;
+  padding: 0px 15px;
+}
