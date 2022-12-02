@@ -76,9 +76,38 @@ button.slider-counter__link {
   width: 15%;
   padding: 0px;
   margin-top: 25px;
+  text-decoration: none;
 }
 
 .dot-view hr {
-  border: 1px solid #e7e6e9;
   margin: 0px;
+  background-color: #e7e6e9;
+}
+
+.dot-view {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  text-align: left;
+}
+
+button.slider-counter__link h4 {
+  margin: 10px 0px;
+  font-weight: 600;
+}
+
+button.slider-counter__link h2 {
+  margin: 15px 0px;
+}
+
+button.slider-counter__link--active .dot-view hr {
+  background-color: #95bf11;
+}
+
+button.slider-counter__link--active .dot-view h4 {
+  color: #95bf11;
+}
+
+button.slider-counter__link--active .dot-view h2 {
+  font-weight: bold;
 }
