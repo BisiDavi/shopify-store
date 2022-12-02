@@ -110,9 +110,17 @@ button.slider-counter__link h4 {
   font-size: 18px;
 }
 
-button.slider-counter__link h2 {
-  margin: 16px 0px;
+button.slider-counter__link .dot-view h2 {
+  margin-top: 16px;
+  padding: 0;
+  margin-bottom: 0px;
   font-size: 25px;
+}
+
+button.slider-counter__link p {
+  margin: 3px 0px;
+  padding: 0px;
+  font-size: 12px;
 }
 
 button.slider-counter__link--active .dot-view hr {
