@@ -134,8 +134,8 @@
                   {{ forloop.index }}
                 {% else %}
                   <div class="dot-view">
+                    <hr/>
                     <h4>0{{ forloop.index }}</h4>
-                    <span class="dot"></span>
                     <h2>
                       {{ block.settings.heading }}
                     </h2>
@@ -217,11 +217,6 @@
         "label": "t:sections.slideshow.settings.slide_height.label"
       },
       {
-        "type": "text",
-        "id": "tag",
-        "label": "Tag"
-      },
-      {
         "type": "select",
         "id": "slider_visual",
         "options": [
@@ -238,7 +233,8 @@
         ],
         "default": "dots",
         "label": "t:sections.slideshow.settings.slider_visual.label"
-      }, {
+      },
+      {
         "type": "checkbox",
         "id": "auto_rotate",
         "label": "t:sections.slideshow.settings.auto_rotate.label",
@@ -289,6 +285,11 @@
             "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
           },
           {
+            "type": "text",
+            "id": "tag",
+            "label": "Tag"
+          },
+          {
             "type": "select",
             "id": "heading_size",
             "options": [
@@ -305,8 +306,7 @@
             ],
             "default": "h1",
             "label": "t:sections.all.heading_size.label"
-          },
-          {
+          }, {
             "type": "text",
             "id": "subheading",
             "default": "Tell your brand's story through images",
