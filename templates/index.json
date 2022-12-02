@@ -25,6 +25,7 @@
         "layout": "full_bleed",
         "slide_height": "medium",
         "auto_rotate": false,
+        "slider_visual": "dot",
         "change_slides_speed": 5
       }
     },

@@ -23,7 +23,7 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
+<slideshow-component class="custom slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
@@ -42,7 +42,10 @@
                 {%- if section.settings.slider_visual == 'numbers' -%}
                   {{ forloop.index }}
                 {% else %}
-                  <span class="dot"></span>
+                  <div class="dot-view">
+                    <span class="dot"></span>
+                    {{ block.settings.heading }}
+                  </div>
                 {%- endif -%}
               </button>
             {%- endfor -%}
@@ -73,11 +76,6 @@
 
   <div class="page-width slideshow custom-slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}" id="Slider-{{ section.id }}" aria-live="polite" aria-atomic="true" data-autoplay="{{ section.settings.auto_rotate }}" data-speed="{{ section.settings.change_slides_speed }}">
     {%- for block in section.blocks -%}
-      <style>
-        #Slide-{{ section.id }}-{{ forloop.index }}.banner__media::after {
-          opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
-        }
-      </style>
       <div class="slideshow__slide grid__item grid--1-col slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}" {{ block.shopify_attributes }} role="group" aria-roledescription="{{ 'sections.slideshow.slide' | t }}" aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" tabindex="-1">
         <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
           <div class="content_text">
@@ -135,7 +133,14 @@
                 {%- if section.settings.slider_visual == 'numbers' -%}
                   {{ forloop.index }}
                 {% else %}
-                  <span class="dot"></span>
+                  <div class="dot-view">
+                    <h4>0{{ forloop.index }}</h4>
+                    <span class="dot"></span>
+                    <h2>
+                      {{ block.settings.heading }}
+                    </h2>
+                    <p>{{ block.settings.tag }}</p>
+                  </div>
                 {%- endif -%}
               </button>
             {%- endfor -%}
@@ -208,8 +213,13 @@
             "label": "t:sections.slideshow.settings.slide_height.options__4.label"
           }
         ],
-        "default": "adapt_image",
+        "default": "medium",
         "label": "t:sections.slideshow.settings.slide_height.label"
+      },
+      {
+        "type": "text",
+        "id": "tag",
+        "label": "Tag"
       },
       {
         "type": "select",
@@ -226,10 +236,9 @@
             "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
           }
         ],
-        "default": "counter",
+        "default": "dots",
         "label": "t:sections.slideshow.settings.slider_visual.label"
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "auto_rotate",
         "label": "t:sections.slideshow.settings.auto_rotate.label",
