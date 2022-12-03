@@ -1589,3 +1589,9 @@ button.product-form__submit {
 .product-form__buttons .button:hover {
   opacity: 0.5;
 }
+
+.price-group {
+  border: 1px solid #e7e6e9;
+  padding: 20px;
+  border-radius: 20px;
+}

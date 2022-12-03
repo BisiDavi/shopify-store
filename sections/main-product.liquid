@@ -88,6 +88,7 @@
                   {{ product.vendor }}
                 </p>
               </div>
+              <div class="price-group">
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
@@ -322,6 +323,7 @@
                     </div>
                   {%- endform -%}
                 </product-form>
+              </div>
 
                 {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
