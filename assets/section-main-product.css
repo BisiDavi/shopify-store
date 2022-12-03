@@ -1561,7 +1561,6 @@ a.product__text {
   box-shadow: none;
   min-height: unset;
   height: 40px;
-  border: 0px;
 }
 
 button.shopify-payment-button__button {
@@ -1571,4 +1570,22 @@ button.shopify-payment-button__button {
 button.product-form__submit {
   background: #95bf11;
   color: white;
+}
+
+.product-form__buttons button::after {
+  box-shadow: none;
+}
+
+.product-form__buttons:hover::after {
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.product-form__buttons button:hover::after,
+.product-form__buttons .button:hover::after {
+  box-shadow: none;
+}
+
+.product-form__buttons .button:hover {
+  opacity: 0.5;
 }
