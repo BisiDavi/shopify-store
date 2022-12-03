@@ -323,6 +323,15 @@
                     </div>
                   {%- endform -%}
                 </product-form>
+                <div class="product_details">
+                  <div class="secure">
+                    {% render 'lock-icon' %}
+                    <h6>Secure transaction</h6>
+                  </div>
+                  <div class="in-stock">
+                    {% render 'instock-icon' %}
+                  </div>
+                </div>
               </div>
 
                 {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
