@@ -332,6 +332,11 @@
                     {% render 'instock-icon' %}
                   </div>
                 </div>
+                <hr />
+                <div class="imported">
+                  {% render 'imported-icon' %}
+                  <h6>Buy now to recieve by {{ "now" | date: "%Y-%m-%d %H:%M" }}.</h6>
+                </div>
               </div>
 
                 {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
