@@ -5,20 +5,26 @@
     <div class="overlay"></div>
   </div>
   <div class="w-25">
-    <cart-items>
-      {%- if cart != empty -%}
-        {%- for item in cart.items -%}
-          <a href="{{ item.url }}" id="cartItem{{ item.index | plus: 1 }}" class="cart-item">
-            <img src="{{ item.image | image_url: width: 300 }}" class="cart-item__image" alt="{{ item.image.alt | escape }}" loading="lazy" width="150" height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}">
-            <div class="content">
-              <h4>{{ item.product.title | escape }}</h4>
-              <div class="group">
-                <h3>{{ item.final_price | money }}</h3>
+    <div class="cart">
+      <h2>Cart</h2>
+      <cart-items>
+        {%- if cart != empty -%}
+          {%- for item in cart.items -%}
+            <a href="{{ item.url }}" id="cartItem{{ item.index | plus: 1 }}" class="cart-item">
+              <img src="{{ item.image | image_url: width: 300 }}" class="cart-item__image" alt="{{ item.image.alt | escape }}" loading="lazy" width="150" height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}">
+              <div class="content">
+                <h4>{{ item.product.title | escape }}</h4>
+                <div class="group">
+                  <h3>{{ item.final_price | money_with_currency }}</h3>
+                  <div class="trash">
+                    {% render 'trash-icon' %}
+                  </div>
+                </div>
               </div>
-            </div>
-          </a>
-        {%- endfor -%}
-      {%- endif -%}
-    </cart-items>
+            </a>
+          {%- endfor -%}
+        {%- endif -%}
+      </cart-items>
+    </div>
   </div>
 </div>
