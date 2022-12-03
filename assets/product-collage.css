@@ -1,7 +1,6 @@
 .product-collage {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
 }
 .products ul {
   display: flex;

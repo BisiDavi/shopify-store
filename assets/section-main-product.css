@@ -1546,6 +1546,10 @@ a.product__text {
   padding-bottom: 0px;
 }
 
+.product-form-section .product-form {
+  margin: 20px 0px 10px 0px;
+}
+
 .product-form__buttons {
   display: flex;
   justify-content: space-between;
@@ -1592,6 +1596,6 @@ button.product-form__submit {
 
 .price-group {
   border: 1px solid #e7e6e9;
-  padding: 20px;
+  padding: 30px 20px 0px 20px;
   border-radius: 20px;
 }
