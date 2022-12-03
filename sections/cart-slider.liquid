@@ -1,7 +1,9 @@
 {{ 'cart-slider.css' | asset_url | stylesheet_tag }}
 
 <div class="cart-slider">
-  <div class="w-75"></div>
+  <div class="w-75">
+    <div class="overlay"></div>
+  </div>
   <div class="w-25">
     <cart-items>
       {%- if cart != empty -%}
