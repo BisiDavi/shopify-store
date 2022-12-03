@@ -13,7 +13,7 @@
   background-color: black;
   opacity: 0.6;
   display: flex;
-  width: 60%;
+  width: 75%;
   height: 100vh;
   position: fixed;
   left: 0px;
@@ -21,7 +21,7 @@
 
 .w-25 {
   background-color: white;
-  width: 40%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   padding: 0px;
@@ -37,6 +37,7 @@
 .w-25 h2 {
   font-weight: 600;
   font-size: 24px;
+  margin: 0px;
 }
 
 .cart {
@@ -72,6 +73,24 @@ a.cart-item {
 .price-overview {
   box-shadow: 0px -4px 32px rgba(0, 0, 0, 0.1);
   height: 18vh;
+}
+
+.price-overview button {
+  background: #faa916;
+  border-radius: 12px;
+  width: 100%;
+  color: white;
+  height: 40px;
+  border: none;
+  width: 80%;
+  display: flex;
+  margin: 30px auto 0px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-overview button:hover {
+  opacity: 0.7;
 }
 
 .feature-products {
