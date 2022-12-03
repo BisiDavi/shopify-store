@@ -326,16 +326,17 @@
                 <div class="product_details">
                   <div class="secure">
                     {% render 'lock-icon' %}
-                    <h6>Secure transaction</h6>
+                    <h4>Secure transaction</h4>
                   </div>
                   <div class="in-stock">
                     {% render 'instock-icon' %}
                   </div>
                 </div>
-                <hr />
+                <hr class="product__underline" />
                 <div class="imported">
                   {% render 'imported-icon' %}
-                  <h6>Buy now to recieve by {{ "now" | date: "%Y-%m-%d %H:%M" }}.</h6>
+                  {% assign days =7 | times: 86400 %}
+                  <h4>Buy now to receive on {{ "now" | date: "%s" | plus: days | date: "%v" }}.</h4>
                 </div>
               </div>
 
