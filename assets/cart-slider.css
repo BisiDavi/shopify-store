@@ -87,6 +87,8 @@ a.cart-item {
   margin: 30px auto 0px auto;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .price-overview button:hover {
