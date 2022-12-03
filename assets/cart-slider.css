@@ -1,0 +1,15 @@
+.cart-slider {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.w-75 {
+  background-color: gray;
+  opacity: 0.3;
+}
+
+.w-25 {
+  background-color: white;
+}
