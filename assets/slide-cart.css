@@ -1,5 +1,9 @@
-.cart-slider {
+#cart-slider.active {
   display: flex;
+}
+
+.cart-slider {
+  display: none;
   flex-direction: row;
   align-items: flex-start;
   height: 100vh;
