@@ -26,7 +26,7 @@
     </div>
     <div class="feature-products">
       <h2>Recommended for you</h2>
-      {% render 'recommended-slider'
+      {% render 'recommendation-slider'
        , products: section.settings.collection.products
        %}
     </div>
@@ -43,16 +43,16 @@
 </div>
 
 {% schema %}
-{
-  "name": "Slide Cart",
-  "class": "section",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Collection"
-    }
-  ]
-}
+  {
+    "name": "Slide Cart",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+    ]
+  }
 {% endschema %}
