@@ -21,6 +21,7 @@
   height: 100vh;
   position: fixed;
   left: 0px;
+  cursor: pointer;
 }
 
 .w-25 {
