@@ -31,6 +31,11 @@
   height: 100%;
 }
 
+.recommended-slider #Slider-slide-cart .card {
+  padding: 0;
+  margin-right: 0;
+}
+
 .recommended-slider #Slider-slide-cart .card-wrapper:hover {
   border: 1px solid #e7e6e9;
 }

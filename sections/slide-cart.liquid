@@ -5,7 +5,10 @@
   <div class="w-75"></div>
   <div class="w-25">
     <div class="cart">
-      <h2>Cart</h2>
+      <div class="cart-item_count">
+        <h2>Cart</h2>
+        <span>{{ cart.item_count }}</span>
+      </div>
       <cart-items>
         {%- if cart != empty -%}
           {%- for item in cart.items -%}
@@ -14,20 +17,20 @@
               <div class="content">
                 <h4>{{ item.product.title | escape }}</h4>
                 <div class="group">
-                  <h3>{{ item.original_line_price | money_with_currency }}</h3>
                   <div class="cart-item__quantity-wrapper">
                     <quantity-input class="quantity">
-                      <button class="quantity__button no-js-hidden" name="minus" type="button">
+                      <button class="quantity__button no-js-hidden minus" name="minus" type="button">
                         <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
                         {% render 'icon-minus' %}
                       </button>
                       <input class="quantity__input" type="number" name="updates[]" value="{{ item.quantity }}" min="0" aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}" id="Quantity-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}"/>
-                      <button class="quantity__button no-js-hidden" name="plus" type="button">
+                      <button class="quantity__button no-js-hidden plus" name="plus" type="button">
                         <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
                         {% render 'icon-plus' %}
                       </button>
                     </quantity-input>
                   </div>
+                  <h3>{{ item.original_line_price | money_with_currency }}</h3>
                   <div class="trash">
                     {% render 'trash-icon' %}
                   </div>
