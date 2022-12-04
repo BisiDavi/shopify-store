@@ -325,13 +325,13 @@
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
-    {%- liquid
-      if settings.cart_type == 'drawer' 
-        render 'cart-drawer'
+    {%- comment -%} {%- liquid
+      if settings.cart_type == "notification"
+          section "slide-cart"
+        else if settings.cart_type == "drawer"
+          section "slide-cart"
       endif 
-    -%}
-
-    {% section "slide-cart" %}
+    -%} {%- endcomment -%}
 
     {% section 'announcement-bar' %}
     {% section 'header' %}

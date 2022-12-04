@@ -1,7 +1,7 @@
 {{ 'slide-cart.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
-<div class="cart-slider">
+<div class="cart-slider" id="cart-slider">
   <div class="w-75"></div>
   <div class="w-25">
     <div class="cart">
@@ -68,7 +68,8 @@
       {
         "type": "collection",
         "id": "collection",
-        "label": "Collection"
+        "label": "Collection",
+        "default": "home"
       }
     ]
   }
