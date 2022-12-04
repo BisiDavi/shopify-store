@@ -6,7 +6,7 @@ class SlideCart extends HTMLElement {
     this.closeButton = document.getElementById("closeButton");
     this.openButton = document.getElementById("cart-icon-bubble");
 
-    this.notification.addEventListener(
+    this.slider.addEventListener(
       "keyup",
       (evt) => evt.code === "Escape" && this.close()
     );
