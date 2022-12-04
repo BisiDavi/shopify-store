@@ -26,10 +26,14 @@
     </div>
     <div class="feature-products">
       <h2>Recommended for you</h2>
-
     </div>
     <div class="price-overview">
-      <h2>Subtotal</h2>
+      <div class="subtotal">
+        <h2>Subtotal</h2>
+        <h2>
+          {{ cart.total_price | money_with_currency }}
+        </h2>
+      </div>
       <button>Secure Checkout →</button>
     </div>
   </div>

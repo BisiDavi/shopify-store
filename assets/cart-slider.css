@@ -129,3 +129,8 @@ a.cart-item img {
   margin: 0;
   margin-top: -10px;
 }
+
+.price-overview .subtotal {
+  display: flex;
+  justify-content: space-between;
+}
