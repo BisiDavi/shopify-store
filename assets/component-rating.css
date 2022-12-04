@@ -95,3 +95,10 @@
 .vendor-mild-pink {
   color: var(--color-mild-pink);
 }
+
+.add-to-cart {
+  display: flex;
+}
+.quick-add {
+  margin-top: 10px;
+}

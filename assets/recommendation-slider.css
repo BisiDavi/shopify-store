@@ -1,3 +1,7 @@
 .recommended-slider {
   margin-top: 4px;
 }
+
+.recommended-slider .add-to-cart span {
+  display: none;
+}

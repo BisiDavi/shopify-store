@@ -230,13 +230,14 @@
                       disabled
                     {% endif %}
                   >
-                    <span>
+                    <div class="add-to-cart">
                       {%- if card_product.selected_or_first_available_variant.available -%}
-                       {% render 'cart-icon' %}   {{ 'products.product.add_to_cart' | t }}
+                       {% render 'cart-icon' %}  <span> {{ 'products.product.add_to_cart' | t }}
+                       </span>
                       {%- else -%}
                         {{ 'products.product.sold_out' | t }}
                       {%- endif -%}
-                    </span>
+                    </div>
                     <span class="sold-out-message hidden">
                       {{ 'products.product.sold_out' | t }}
                     </span>
