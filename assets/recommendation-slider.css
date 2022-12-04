@@ -5,3 +5,26 @@
 .recommended-slider .add-to-cart span {
   display: none;
 }
+
+.recommended-slider #Slider-slide-cart li {
+  width: 100%;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+.recommended-slider #Slider-slide-cart li .card--standard {
+  padding: 0px;
+}
+
+.recommended-slider #Slider-slide-cart .card__inner {
+  height: 50%;
+  border-radius: 20px;
+}
+
+.recommended-slider #Slider-slide-cart .card__inner img {
+  border-radius: 20px;
+}
+
+/* .recommended-slider #Slider-slide-cart .card-wrapper {
+  height: unset;
+} */
