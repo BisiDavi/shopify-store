@@ -1,4 +1,5 @@
 {{ 'slide-cart.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 <div class="cart-slider">
   <div class="w-75"></div>
@@ -9,11 +10,24 @@
         {%- if cart != empty -%}
           {%- for item in cart.items -%}
             <a href="{{ item.url }}" id="cartItem{{ item.index | plus: 1 }}" class="cart-item">
-              <img src="{{ item.image | image_url: width: 300 }}" class="cart-item__image" alt="{{ item.image.alt | escape }}" loading="lazy" width="150" height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}">
+              <img src="{{ item.image | image_url: width: 300 }}" class="cart-item__image" alt="{{ item.image.alt | escape }}" loading="lazy" width="150" height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"/>
               <div class="content">
                 <h4>{{ item.product.title | escape }}</h4>
                 <div class="group">
-                  <h3>{{ item.final_price | money_with_currency }}</h3>
+                  <h3>{{ item.original_line_price | money_with_currency }}</h3>
+                  <div class="cart-item__quantity-wrapper">
+                    <quantity-input class="quantity">
+                      <button class="quantity__button no-js-hidden" name="minus" type="button">
+                        <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                        {% render 'icon-minus' %}
+                      </button>
+                      <input class="quantity__input" type="number" name="updates[]" value="{{ item.quantity }}" min="0" aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}" id="Quantity-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}"/>
+                      <button class="quantity__button no-js-hidden" name="plus" type="button">
+                        <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                        {% render 'icon-plus' %}
+                      </button>
+                    </quantity-input>
+                  </div>
                   <div class="trash">
                     {% render 'trash-icon' %}
                   </div>
@@ -43,16 +57,16 @@
 </div>
 
 {% schema %}
-{
-  "name": "Slide Cart",
-  "class": "section",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Collection"
-    }
-  ]
-}
+  {
+    "name": "Slide Cart",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+    ]
+  }
 {% endschema %}

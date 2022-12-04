@@ -49,3 +49,12 @@
 .recommended-slider #Slider-slide-cart .card__content {
   padding: 10px;
 }
+
+.recommended-slider button.quick-add__submit {
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.recommended-slider .price.price--on-sale {
+  font-weight: bold;
+}

@@ -118,6 +118,7 @@ a.cart-item img {
 
 .cart-slider .content .group {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
