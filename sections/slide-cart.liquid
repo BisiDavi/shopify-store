@@ -1,4 +1,4 @@
-{{ 'cart-slider.css' | asset_url | stylesheet_tag }}
+{{ 'slide-cart.css' | asset_url | stylesheet_tag }}
 
 <div class="cart-slider">
   <div class="w-75"></div>
@@ -26,6 +26,9 @@
     </div>
     <div class="feature-products">
       <h2>Recommended for you</h2>
+      {% render 'recommended-slider'
+       , products: section.settings.collection.products
+       %}
     </div>
     <div class="price-overview">
       <div class="subtotal">
@@ -38,3 +41,9 @@
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Slide Cart"
+} 
+{% endschema %}
