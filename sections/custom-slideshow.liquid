@@ -24,7 +24,7 @@
 {%- endif -%}
 
 <slideshow-component class="custom slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
-  {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
+  {%- if section.settings.auto_rotate == false and section.blocks.size > 1 -%}
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
       <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
@@ -120,7 +120,7 @@
     {%- endfor -%}
   </div>
 
-  {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
+  {%- if section.blocks.size > 1 and section.settings.auto_rotate == true -%}
     <div class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
       <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
@@ -155,7 +155,7 @@
       <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
 
       {%- if section.settings.auto_rotate -%}
-        <button type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+        <button type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
           {%- render 'icon-pause' -%}
           {%- render 'icon-play' -%}
         </button>
@@ -243,7 +243,7 @@
         "type": "checkbox",
         "id": "auto_rotate",
         "label": "t:sections.slideshow.settings.auto_rotate.label",
-        "default": false
+        "default": true
       }, {
         "type": "range",
         "id": "change_slides_speed",
@@ -314,12 +314,12 @@
           }, {
             "type": "text",
             "id": "subheading",
-            "default": "Tell your brand's story through images",
+            "default": "Baby and toddler drinking and feeding accessories. functional innovative and award-winning essentials to make like easier for parents and babies.",
             "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
           }, {
             "type": "text",
             "id": "button_label",
-            "default": "Button label",
+            "default": "View Collection",
             "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
             "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
           }, {

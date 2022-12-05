@@ -86,7 +86,7 @@
 }
 
 button.slider-counter__link {
-  width: 15%;
+  width: 20%;
   padding: 0px;
   margin-top: 25px;
   text-decoration: none;
@@ -111,10 +111,10 @@ button.slider-counter__link h4 {
 }
 
 button.slider-counter__link .dot-view h2 {
-  margin-top: 16px;
+  margin-top: 10px;
   padding: 0;
   margin-bottom: 0px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 button.slider-counter__link p {
@@ -174,4 +174,8 @@ button.slider-counter__link--active .dot-view h2 {
   box-shadow: none;
   border-radius: 15px;
   padding: 0px 15px;
+}
+
+.custom-slideshow .slideshow__media {
+  position: relative;
 }
