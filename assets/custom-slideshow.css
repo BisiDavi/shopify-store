@@ -1,6 +1,7 @@
 .custom-slideshow.slideshow {
   margin-top: 20px;
-  min-height: 500px;
+  min-height: 480px;
+  height: 480px;
 }
 
 .custom .slideshow__controls.slider-buttons {
