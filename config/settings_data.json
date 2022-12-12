@@ -188,6 +188,12 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "slide-cart": {
+        "type": "slide-cart",
+        "settings": {
+          "collection": "frontpage"
+        }
       }
     },
     "content_for_index": [
