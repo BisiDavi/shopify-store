@@ -293,6 +293,39 @@
         "padding_bottom": 4
       }
     },
+    "69810973-a95c-4a13-9d40-8e73b782bf73": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--17205948547346__69810973-a95c-4a13-9d40-8e73b782bf73-1670863797837ee7fb-0": {
+          "type": "product-collection",
+          "settings": {
+            "title": "Health",
+            "color_scheme": "carton-brown"
+          }
+        }
+      },
+      "block_order": [
+        "template--17205948547346__69810973-a95c-4a13-9d40-8e73b782bf73-1670863797837ee7fb-0"
+      ],
+      "settings": {
+        "collection": "frontpage",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "best_seller": {
       "type": "best-seller",
       "settings": {
@@ -345,6 +378,7 @@
     "shipping_banner",
     "2b78d3fc-2390-47d3-8ae3-508b3c16ba3a",
     "product_collage",
+    "69810973-a95c-4a13-9d40-8e73b782bf73",
     "best_seller",
     "collection_tabs"
   ]
