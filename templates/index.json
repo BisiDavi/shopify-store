@@ -235,11 +235,46 @@
         "shipping-banner"
       ],
       "settings": {
+        "shipping_banner": "shopify:\/\/shop_images\/free-shipping_38bde5ed-ccc6-485f-bec8-f32712c3c650.png"
+      }
+    },
+    "2b78d3fc-2390-47d3-8ae3-508b3c16ba3a": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--17205948547346__2b78d3fc-2390-47d3-8ae3-508b3c16ba3a-16708625204c98b0aa-0": {
+          "type": "product-collection",
+          "settings": {
+            "title": "Collection Title",
+            "color_scheme": "deep-purple"
+          }
+        }
+      },
+      "block_order": [
+        "template--17205948547346__2b78d3fc-2390-47d3-8ae3-508b3c16ba3a-16708625204c98b0aa-0"
+      ],
+      "settings": {
+        "collection": "",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product_collage": {
       "type": "product-collage",
       "settings": {
+        "collage_banner": "shopify:\/\/shop_images\/collage-banner.png",
         "collection": "all",
         "products_to_show": 3,
         "columns_desktop": 4,
@@ -308,6 +343,7 @@
     "info_cards",
     "featured_collections",
     "shipping_banner",
+    "2b78d3fc-2390-47d3-8ae3-508b3c16ba3a",
     "product_collage",
     "best_seller",
     "collection_tabs"
