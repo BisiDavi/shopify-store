@@ -8,7 +8,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/banner-1.webp",
             "heading": "B.box",
-            "tag": "",
+            "tag": "Baby Care",
             "heading_size": "h1",
             "subheading": "Baby and toddler drinking and feeding accessories. functional innovative and award-winning essentials to make like easier for parents and babies.",
             "button_label": "View Collection",
@@ -50,7 +50,7 @@
         "layout": "full_bleed",
         "slide_height": "medium",
         "slider_visual": "dot",
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
