@@ -369,6 +369,39 @@
         "padding_top": 12,
         "padding_bottom": 12
       }
+    },
+    "1e9f65e2-0d48-476f-a981-6ffd978438d6": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--17205948547346__1e9f65e2-0d48-476f-a981-6ffd978438d6-1670863797837ee7fb-0": {
+          "type": "product-collection",
+          "settings": {
+            "title": "Hair Color",
+            "color_scheme": "mild-pink"
+          }
+        }
+      },
+      "block_order": [
+        "template--17205948547346__1e9f65e2-0d48-476f-a981-6ffd978438d6-1670863797837ee7fb-0"
+      ],
+      "settings": {
+        "collection": "frontpage",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -380,6 +413,7 @@
     "product_collage",
     "69810973-a95c-4a13-9d40-8e73b782bf73",
     "best_seller",
-    "collection_tabs"
+    "collection_tabs",
+    "1e9f65e2-0d48-476f-a981-6ffd978438d6"
   ]
 }
