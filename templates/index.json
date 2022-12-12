@@ -6,27 +6,134 @@
         "slide": {
           "type": "slide",
           "settings": {
-            "heading": "Custom Image Slide",
+            "image": "shopify:\/\/shop_images\/banner-1.webp",
+            "heading": "B.box",
+            "tag": "Baby Care",
+            "heading_size": "h1",
             "subheading": "Baby and toddler drinking and feeding accessories. functional innovative and award-winning essentials to make like easier for parents and babies.",
-            "box_align": "middle-center"
+            "button_label": "View Collection",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
           }
         },
         "slide2": {
           "type": "slide",
           "settings": {
-            "heading": "Custom Image Slide 2",
+            "image": "shopify:\/\/shop_images\/banner-2_0a6a3df2-603a-4223-8a44-038ad0a3dfbf.webp",
+            "heading": "Ostelin",
+            "tag": "Vitamins",
+            "heading_size": "h1",
             "subheading": "Baby and toddler drinking and feeding accessories. functional innovative and award-winning essentials to make like easier for parents and babies.",
-            "box_align": "middle-center"
+            "button_label": "View Collection",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "1785c977-ee37-474a-b744-94f9f180d6ec": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-3.webp",
+            "heading": "Aptamil",
+            "tag": "Baby Formula",
+            "heading_size": "h1",
+            "subheading": "Baby and toddler drinking and feeding accessories. functional innovative and award-winning essentials to make like easier for parents and babies.",
+            "button_label": "View Collection",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "4f24c42c-5403-41c5-9a67-8b5ac26879cc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-4.webp",
+            "heading": "BlackMores",
+            "tag": "Nature's way",
+            "heading_size": "h1",
+            "subheading": "Baby and toddler drinking and feeding accessories. functional innovative and award-winning essentials to make like easier for parents and babies.",
+            "button_label": "View Collection",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "f5135823-afe4-48a8-9ce0-d1dc0f4eaa03": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-5.webp",
+            "heading": "Swisse",
+            "tag": "Skin Care",
+            "heading_size": "h1",
+            "subheading": "Baby and toddler drinking and feeding accessories. functional innovative and award-winning essentials to make like easier for parents and babies.",
+            "button_label": "View Collection",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "4c471de7-fc57-4347-8a9b-e34734bf5f3f": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-6.webp",
+            "heading": "Neutrogena",
+            "tag": "Cosmetics",
+            "heading_size": "h1",
+            "subheading": "Baby and toddler drinking and feeding accessories. functional innovative and award-winning essentials to make like easier for parents and babies.",
+            "button_label": "View Collection",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
           }
         }
       },
-      "block_order": ["slide", "slide2"],
+      "block_order": [
+        "slide",
+        "slide2",
+        "1785c977-ee37-474a-b744-94f9f180d6ec",
+        "4f24c42c-5403-41c5-9a67-8b5ac26879cc",
+        "f5135823-afe4-48a8-9ce0-d1dc0f4eaa03",
+        "4c471de7-fc57-4347-8a9b-e34734bf5f3f"
+      ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
-        "auto_rotate": false,
         "slider_visual": "dot",
-        "change_slides_speed": 5
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
     "info_cards": {
@@ -65,7 +172,14 @@
           }
         }
       },
-      "block_order": ["card1", "card2", "card3", "card4"]
+      "block_order": [
+        "card1",
+        "card2",
+        "card3",
+        "card4"
+      ],
+      "settings": {
+      }
     },
     "featured_collections": {
       "type": "featured-collections",
@@ -73,29 +187,36 @@
         "collection1": {
           "type": "product-collection",
           "settings": {
-            "title": "Weight Loss"
+            "title": "Weight Loss",
+            "color_scheme": "deep-purple"
           }
         },
         "collection2": {
           "type": "product-collection",
           "settings": {
-            "title": "Sport Nutrition"
+            "title": "Sport Nutrition",
+            "color_scheme": "deep-purple"
           }
         }
       },
-      "block_order": ["collection1", "collection2"],
+      "block_order": [
+        "collection1",
+        "collection2"
+      ],
       "settings": {
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "show_view_all": true,
-        "color_scheme": "background-1",
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": false,
-        "columns_mobile": "2",
         "enable_quick_add": true,
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 12,
         "padding_bottom": 12
@@ -105,25 +226,68 @@
       "type": "shipping-banner",
       "blocks": {
         "shipping-banner": {
-          "type": "shipping-banner"
+          "type": "shipping-banner",
+          "settings": {
+          }
         }
       },
-      "block_order": ["shipping-banner"]
-    },
-    "product_collage": {
-      "type": "product-collage",
+      "block_order": [
+        "shipping-banner"
+      ],
       "settings": {
-        "collection": "all",
-        "products_to_show": 3,
+        "shipping_banner": "shopify:\/\/shop_images\/free-shipping_38bde5ed-ccc6-485f-bec8-f32712c3c650.png"
+      }
+    },
+    "2b78d3fc-2390-47d3-8ae3-508b3c16ba3a": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--17205948547346__2b78d3fc-2390-47d3-8ae3-508b3c16ba3a-16708625204c98b0aa-0": {
+          "type": "product-collection",
+          "settings": {
+            "title": "Collection Title",
+            "color_scheme": "deep-purple"
+          }
+        }
+      },
+      "block_order": [
+        "template--17205948547346__2b78d3fc-2390-47d3-8ae3-508b3c16ba3a-16708625204c98b0aa-0"
+      ],
+      "settings": {
+        "collection": "",
+        "products_to_show": 8,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
-        "color_scheme": "background-1",
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": false,
-        "columns_mobile": "2",
         "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product_collage": {
+      "type": "product-collage",
+      "settings": {
+        "collage_banner": "shopify:\/\/shop_images\/collage-banner.png",
+        "collection": "all",
+        "products_to_show": 3,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 4,
         "padding_bottom": 4
@@ -133,16 +297,19 @@
       "type": "best-seller",
       "settings": {
         "collection": "all",
+        "color_scheme": "background-1",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": true,
-        "color_scheme": "background-1",
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": false,
-        "columns_mobile": "2",
         "enable_quick_add": true,
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 12,
         "padding_bottom": 12
@@ -152,16 +319,19 @@
       "type": "collection-tabs",
       "settings": {
         "collection": "all",
+        "color_scheme": "background-1",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
-        "color_scheme": "background-1",
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": false,
-        "columns_mobile": "2",
         "enable_quick_add": true,
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 12,
         "padding_bottom": 12
@@ -173,6 +343,7 @@
     "info_cards",
     "featured_collections",
     "shipping_banner",
+    "2b78d3fc-2390-47d3-8ae3-508b3c16ba3a",
     "product_collage",
     "best_seller",
     "collection_tabs"
