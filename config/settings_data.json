@@ -119,31 +119,17 @@
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
     "sections": {
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "Delivery from Australia to Hong Kong - EXPECT DELAYS DUE TO COVID - 10-20 days -  SORRY!",
-              "text_alignment": "left",
-              "color_scheme": "background-1",
-              "link": ""
-            }
-          }
-        },
-        "block_order": ["announcement-bar-0"],
-        "settings": {}
-      },
       "header": {
         "type": "header",
         "settings": {
           "color_scheme": "accent-3",
+          "logo": "shopify:\/\/shop_images\/site-Logo.png",
           "whatsapp_number": "9449 2060",
           "logo_width": 90,
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
+          "menu_secondary": "main-menu",
           "show_line_separator": true,
           "enable_sticky_header": true,
           "mobile_logo_position": "center",
@@ -170,8 +156,14 @@
             }
           }
         },
-        "block_order": ["footer-0", "footer-1"],
+        "block_order": [
+          "footer-0",
+          "footer-1"
+        ],
         "settings": {
+          "whatsapp_contact": "9442 2060",
+          "opening_hours": "Opening Hours: Mon- Sat: 9:00 am - 6:00 pm",
+          "about_us": "We are an online business operating out of Sydney, Australia. All products are shipped weekly from Sydney to Hong Kong.\nNo minimum orders for Hong Kong, shipping \nvia HK Post, and SF Express.",
           "color_scheme": "background-1",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
@@ -198,7 +190,9 @@
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
@@ -321,21 +315,6 @@
       "predictive_search_show_price": false,
       "currency_code_enabled": true,
       "sections": {
-        "announcement-bar": {
-          "type": "announcement-bar",
-          "blocks": {
-            "announcement-bar-0": {
-              "type": "announcement",
-              "settings": {
-                "text": "Delivery from Australia to Hong Kong - EXPECT DELAYS DUE TO COVID - 10-20 days -  SORRY!",
-                "color_scheme": "background-1",
-                "link": ""
-              }
-            }
-          },
-          "block_order": ["announcement-bar-0"],
-          "settings": {}
-        },
         "header": {
           "type": "header",
           "settings": {
@@ -369,11 +348,15 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
               }
             }
           },
-          "block_order": ["footer-0", "footer-1", "footer-2"],
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
           "settings": {
             "color_scheme": "background-1",
             "newsletter_enable": true,
