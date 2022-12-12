@@ -152,7 +152,7 @@
             "type": "link_list",
             "settings": {
               "heading": "Categories",
-              "menu": "footer"
+              "menu": "secondary-menu"
             }
           }
         },
