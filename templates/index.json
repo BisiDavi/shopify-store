@@ -244,8 +244,8 @@
         "template--17205948547346__2b78d3fc-2390-47d3-8ae3-508b3c16ba3a-16708625204c98b0aa-0": {
           "type": "product-collection",
           "settings": {
-            "title": "Collection Title",
-            "color_scheme": "deep-purple"
+            "title": "Quit Smoking",
+            "color_scheme": "deep-green"
           }
         }
       },
@@ -253,7 +253,7 @@
         "template--17205948547346__2b78d3fc-2390-47d3-8ae3-508b3c16ba3a-16708625204c98b0aa-0"
       ],
       "settings": {
-        "collection": "",
+        "collection": "frontpage",
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,
