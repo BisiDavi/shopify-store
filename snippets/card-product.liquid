@@ -232,8 +232,7 @@
                   >
                     <div class="add-to-cart">
                       {%- if card_product.selected_or_first_available_variant.available -%}
-                       {% render 'cart-icon' %}  <span> {{ 'products.product.add_to_cart' | t }}
-                       </span>
+                       {% render 'cart-icon' %}  <span> {{ 'products.product.add_to_cart' | t }}</span>
                       {%- else -%}
                         {{ 'products.product.sold_out' | t }}
                       {%- endif -%}
