@@ -1569,6 +1569,7 @@ a.product__text {
 
 button.shopify-payment-button__button {
   background: #faa916;
+  width: 100%;
 }
 
 button.product-form__submit {
