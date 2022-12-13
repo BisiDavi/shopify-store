@@ -46,8 +46,13 @@
     order: 1;
   }
 
-  .info-cards {
-    grid-template-columns: repeat(2, 1fr);
+  .info-cards.page-width {
+    gap: unset;
+    overflow-x: scroll;
+    width: 100%;
+    display: grid;
+    margin: 20px 0px;
+    height: 180px;
   }
 
   .shipping-banner.page-width img {
@@ -65,7 +70,7 @@
   }
 
   .card__content .quick-add {
-    margin-top: -40px;
+    margin-top: 0px;
   }
 
   .custom-slideshow.banner .slideshow__slide .slideshow__media.banner__media {
@@ -82,5 +87,16 @@
   div#Slide-template--17206341140754__custom_slideshow-5,
   div#Slide-template--17206341140754__custom_slideshow-6 {
     display: none;
+  }
+
+  .card.card--standard.card--media {
+    margin-right: 10px;
+    padding: 10px 5px;
+  }
+
+  .info-cards .card {
+    width: 240px;
+    max-width: 240px;
+    margin-right: 20px;
   }
 }
