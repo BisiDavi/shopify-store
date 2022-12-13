@@ -198,6 +198,31 @@ a.cart-item img {
   width: 30px;
 }
 
-.group h3.amount {
+.group .amount {
   font-size: 16px;
+}
+
+.cart-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.cart-view a {
+  border: none;
+  height: 30px;
+  width: 100px;
+  border-radius: 8px;
+  color: white;
+  background-color: var(--color-orange);
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.cart-view a:hover {
+  opacity: 0.8;
 }
