@@ -12,7 +12,7 @@
   <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
 {%- endif -%}
 {%- if settings.cart_type == "drawer" -%}
-  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+  {% comment %} {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }} {% endcomment %}
   {{ 'component-cart.css' | asset_url | stylesheet_tag }}
   {{ 'component-totals.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -110,10 +110,7 @@
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'slide-cart.js' | asset_url }}" defer="defer"></script>
-
-{%- if settings.cart_type == "drawer" -%}
-  <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
+<script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" viewbox="0 0 18 19" fill="none">

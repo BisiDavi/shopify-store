@@ -3021,6 +3021,7 @@ header.header {
   font-size: 16px;
   display: flex;
   align-items: center;
+  height: 40px;
 }
 
 .site-button svg {
@@ -3057,10 +3058,6 @@ header.header {
   background-color: var(--color-light-orange);
 }
 
-.color-orange{
-  
-}
-
 .color-light-pink {
   background-color: var(--color-light-pink);
 }
@@ -3069,4 +3066,9 @@ header.header {
   background-color: white;
   box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.01), 0px 6px 6px rgba(0, 0, 0, 0.02),
     0px 2px 3px rgba(0, 0, 0, 0.03), 0px 0px 0px rgba(0, 0, 0, 0.03);
+}
+
+.header-container .secondary-header {
+  display: flex;
+  justify-content: space-between;
 }

@@ -33,6 +33,50 @@ class SlideCart extends HTMLElement {
     removeTrapFocus(this.activeElement);
   }
 
+  getSectionsToRender() {
+    return [
+      {
+        id: "cart-drawer",
+        selector: "#CartDrawer",
+      },
+      {
+        id: "cart-icon-bubble",
+      },
+    ];
+  }
+
+  renderContents(parsedState) {
+    this.getSectionsToRender().forEach((section) => {
+      const sectionElement = section.selector
+        ? document.querySelector(section.selector)
+        : document.getElementById(section.id);
+      sectionElement.innerHTML = this.getSectionInnerHTML(
+        parsedState.sections[section.id],
+        section.selector
+      );
+    });
+
+    setTimeout(() => {
+      this.querySelector("#CartDrawer-Overlay").addEventListener(
+        "click",
+        this.close.bind(this)
+      );
+      this.open();
+    });
+  }
+
+  getSectionsToRender() {
+    return [
+      {
+        id: "cart-slider",
+        selector: "cart-slider",
+      },
+      {
+        id: "cart-icon-bubble",
+      },
+    ];
+  }
+
   getSectionInnerHTML(html, selector = ".shopify-section") {
     return new DOMParser()
       .parseFromString(html, "text/html")
