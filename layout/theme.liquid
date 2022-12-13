@@ -42,6 +42,8 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+
     {{ content_for_header }}
 
     {%- liquid

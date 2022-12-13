@@ -34,8 +34,9 @@
   justify-content: space-between;
 }
 
-.secondary-menu {
+.secondary-header .secondary-menu {
   display: flex;
+  flex-direction: row;
 }
 
 .secondary-header .search {
