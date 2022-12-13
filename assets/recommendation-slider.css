@@ -38,6 +38,7 @@
 
 .recommended-slider #Slider-slide-cart .card-wrapper:hover {
   border: 1px solid #e7e6e9;
+  box-shadow: none;
 }
 
 .recommended-slider s.price-item.price-item--regular {
