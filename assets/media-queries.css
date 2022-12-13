@@ -61,7 +61,7 @@
   }
 
   .collection .collection__title h2.title {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .slider.slider--tablet.contains-card--standard
@@ -128,13 +128,127 @@
     max-width: 100%;
     margin: 0px;
     display: flex;
+    margin-top: 20px;
   }
 
+  .product-collage .card-wrapper .card,
   .product-collage .card-wrapper .card .card__inner,
   .product-collage .card-wrapper .card .card__inner .card__media,
   .product-collage .card-wrapper .card .card__content {
     width: 100%;
     max-width: 100%;
     display: flex;
+  }
+
+  .collection .card-wrapper {
+    width: 100%;
+  }
+
+  .product-collage .color-bg-white.isolate.gradient {
+    width: 100%;
+  }
+
+  .product-collage .card-wrapper .card .card__content {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .product-collage .quick-add__submit {
+    display: flex;
+    align-items: center;
+    min-width: 40%;
+    max-width: 80%;
+    justify-content: center;
+    margin: 40px auto 0px auto;
+  }
+
+  .product-collage .products ul li .card.card--standard {
+    padding: 0px;
+  }
+
+  .tabs .collection,
+  .tabs .grid.product-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tabs .grid.product-grid .grid__item {
+    height: 140px;
+  }
+
+  .tabs .grid.product-grid {
+    height: 160px;
+  }
+
+  .tabs .grid .grid__item.slider__slide {
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .tabs .grid .grid__item.slider__slide .card__media {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    margin-left: 10px;
+  }
+
+  .tabs .grid .grid__item.slider__slide .card__media .media {
+    background-color: white;
+    height: 78%;
+    width: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .tabs
+    .card-wrapper.product-card-wrapper.underline-links-hover
+    .tabs
+    .grid
+    .card__inner,
+  .tabs .card-wrapper.product-card-wrapper.underline-links-hover,
+  .tabs .card__inner {
+    background-color: unset;
+  }
+
+  .tabs .quick-add.no-js-hidden button.quick-add__submit.button {
+    display: none;
+  }
+
+  .tabs .card__heading a.full-unstyled-link {
+    font-size: 16px;
+  }
+
+  .tabs .card-information {
+    margin-top: 30px;
+  }
+
+  .shopify-section .collection-tab .title li {
+    font-size: 15px;
+    display: flex;
+    width: 100%;
+  }
+
+  .shopify-section .collection-tab .title {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    overflow-x: scroll;
+    height: 100px;
+    padding: 10px 0px;
+    margin: 0px 0px 0px 20px;
+    overflow: auto;
+  }
+
+  .tabs .card-information .price .price__sale span {
+    font-size: 18px;
   }
 }
