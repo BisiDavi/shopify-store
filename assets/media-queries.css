@@ -265,8 +265,10 @@
   .footer .about-us {
     margin: 20px 0px;
   }
-  .footer-column-2.column {
+
+  .footer .footer-column-2.column {
     flex-direction: column;
+    margin-top: 20px;
   }
   .footer .footer-column-2.column .footer-block.grid__item {
     margin: 0px;
@@ -274,9 +276,33 @@
 
   .footer .footer-block__heading {
     margin-bottom: 10px;
+    font-size: 18px;
   }
 
   .footer .footer-block__details-content .list-menu__item--link {
     padding: 3px 0px;
+  }
+
+  .footer .footer__blocks-wrapper {
+    order: 2;
+  }
+
+  .footer .footer-block__newsletter {
+    text-align: left;
+    width: 100%;
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .footer-block--newsletter {
+    width: 100%;
+  }
+
+  .footer .footer-block__details-content {
+    margin-bottom: 20px;
+  }
+
+  .footer label.field__label {
+    left: 0px;
   }
 }
