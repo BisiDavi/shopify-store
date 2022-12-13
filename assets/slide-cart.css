@@ -1,5 +1,5 @@
 #cart-slider.active {
-  display: none;
+  display: flex;
 }
 
 .cart-slider {
