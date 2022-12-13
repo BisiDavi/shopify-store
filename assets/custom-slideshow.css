@@ -171,6 +171,7 @@ button.slider-counter__link--active .dot-view h2 {
   padding: 0;
   border-radius: 15px;
   min-height: 40px;
+  opacity: 1;
 }
 
 .slideshow__text .banner__buttons a::after {

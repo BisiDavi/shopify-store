@@ -90,7 +90,7 @@
   }
 
   .card.card--standard.card--media {
-    margin-right: 10px;
+    margin-right: 5px;
     padding: 10px 5px;
   }
 
@@ -98,5 +98,13 @@
     width: 240px;
     max-width: 240px;
     margin-right: 20px;
+  }
+
+  ul.grid li {
+    margin: 0px;
+  }
+
+  ul.grid.product-grid.contains-card li:first-child {
+    margin-right: 5px;
   }
 }
