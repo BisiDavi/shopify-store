@@ -33,7 +33,7 @@
                           class="quantity__button no-js-hidden minus"
                           name="minus"
                           type="button">
-                          <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                          <span class="visually-hidden">{{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}</span>
                           {% render 'icon-minus' %}
                         </button>
                         <input
@@ -43,20 +43,31 @@
                           value="{{ item.quantity }}"
                           min="0"
                           aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-                          id="Quantity-{{ item.index | plus: 1 }}"
+                          id="Drawer-quantity-{{ item.index | plus: 1 }}"
                           data-index="{{ item.index | plus: 1 }}" />
                         <button
                           class="quantity__button no-js-hidden plus"
                           name="plus"
                           type="button">
-                          <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                          <span class="visually-hidden">{{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}</span>
                           {% render 'icon-plus' %}
                         </button>
                       </quantity-input>
                     </div>
-                    <h3>{{ item.original_line_price | money_with_currency }}</h3>
+                    <h3 class="amount">{{ item.original_line_price | money_with_currency }}</h3>
                     <div class="trash">
-                      {% render 'trash-icon' %}
+                      <cart-remove-button
+                        class="cartRemove"
+                        id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
+                        data-index="{{ item.index | plus: 1 }}">
+                        <button
+                          type="button"
+                          class="button button--tertiary"
+                          aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+
+                          {% render 'trash-icon' %}
+                        </button>
+                      </cart-remove-button>
                     </div>
                   </div>
                 </div>
@@ -84,16 +95,16 @@
 </slide-cart>
 
 {% schema %}
-{
-  "name": "Slide Cart",
-  "class": "section",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Collection"
-    }
-  ]
-}
+  {
+    "name": "Slide Cart",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+    ]
+  }
 {% endschema %}
