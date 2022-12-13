@@ -251,4 +251,32 @@
   .tabs .card-information .price .price__sale span {
     font-size: 18px;
   }
+
+  /* footer */
+  footer .footer__content-top {
+    flex-direction: column;
+    padding: 0px 25px;
+  }
+
+  footer .footer__content-top .column {
+    width: 100%;
+  }
+
+  .footer .about-us {
+    margin: 20px 0px;
+  }
+  .footer-column-2.column {
+    flex-direction: column;
+  }
+  .footer .footer-column-2.column .footer-block.grid__item {
+    margin: 0px;
+  }
+
+  .footer .footer-block__heading {
+    margin-bottom: 10px;
+  }
+
+  .footer .footer-block__details-content .list-menu__item--link {
+    padding: 3px 0px;
+  }
 }

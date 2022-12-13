@@ -40,7 +40,7 @@
 
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
-      <div class="footer-column-1">
+      <div class="footer-column-1 column">
         {%- render 'logo' -%}
         <div class="opening-hours">
           <div class="call-us">
@@ -57,7 +57,7 @@
           {{ section.settings.about_us }}
         </div>
       </div>
-      <div class="footer-column-2">
+      <div class="footer-column-2 column">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
           if section.blocks.size == 9
