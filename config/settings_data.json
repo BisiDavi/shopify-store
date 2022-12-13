@@ -129,7 +129,7 @@
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
-          "menu_secondary": "main-menu",
+          "menu_secondary": "secondary-menu",
           "show_line_separator": true,
           "enable_sticky_header": true,
           "mobile_logo_position": "center",
@@ -193,6 +193,25 @@
         "type": "slide-cart",
         "settings": {
           "collection": "frontpage"
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "752db9c2-b7eb-466e-92d1-7cbd932d7d4b": {
+            "type": "announcement",
+            "settings": {
+              "text": "⚡️ Delivery from Australia to Hong Kong - EXPECT DELAYS DUE TO COVID - 10-20 days -  SORRY!",
+              "text_alignment": "left",
+              "color_scheme": "inverse",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "752db9c2-b7eb-466e-92d1-7cbd932d7d4b"
+        ],
+        "settings": {
         }
       }
     },
