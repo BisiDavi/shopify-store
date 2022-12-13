@@ -7,6 +7,10 @@
 
   .cart-slider slider-component.page-width {
     padding: 0px;
+    width: 100%;
+    height: 300px;
+    overflow-x: scroll;
+    display: flex;
   }
 
   .cart-slider .recommended-slider .collection ul {
