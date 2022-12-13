@@ -5,7 +5,7 @@ class SlideCart extends HTMLElement {
     this.slider = document.getElementById("cart-slider");
     this.closeButton = document.getElementById("closeButton");
     this.openButton = document.getElementById("cart-icon-bubble");
-    this.addToCartButton = document.querySelector(".quick-add__submit");
+    this.addToCartButton = document.getElementsByClassName("quick-add__submit");
 
     this.slider.addEventListener(
       "keyup",
