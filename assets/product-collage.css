@@ -22,6 +22,7 @@
 
 .product-collage .products {
   width: 35%;
+  margin-left: 20px;
 }
 
 .collage-banner img {
@@ -31,8 +32,18 @@
 .products ul li .card.card--standard {
   display: flex;
   flex-direction: row;
+  padding: 5px 10px;
 }
 
 .products ul li .card .card__inner {
   margin-right: 10px;
+}
+
+.slider.slider--desktop.contains-card--standard
+  .slider__slide:not(.collection-list__item--no-media) {
+  padding: 0;
+}
+
+.product-collage .card-wrapper.product-card-wrapper:hover {
+  box-shadow: none;
 }
