@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .header-container .secondary-header,
+  .top-header nav.header__inline-menu,
+  .slideshow__controls.slider-buttons.no-js-hidden.slideshow__controls--border-radius-mobile {
+    display: none;
+  }
+
+  .custom-slideshow .slideshow__slide .slideshow__media.banner__media {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .custom-slideshow .slideshow__media.banner__media .content_text {
+    width: 100%;
+  }
+
+  .info-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shipping-banner.page-width img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .collection .collection__title h2.title {
+    font-size: 20px;
+  }
+}

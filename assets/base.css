@@ -3072,3 +3072,11 @@ header.header {
   display: flex;
   justify-content: space-between;
 }
+
+.secondary-header .secondary-menu {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+

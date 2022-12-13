@@ -29,17 +29,6 @@
   padding: 0.5rem;
 }
 
-.header-container .secondary-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.secondary-header .secondary-menu {
-  display: flex;
-  flex-direction: row;
-  font-weight: bold;
-}
-
 .secondary-header .search {
   display: flex;
   border: 1px solid black;
