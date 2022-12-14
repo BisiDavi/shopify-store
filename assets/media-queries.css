@@ -126,6 +126,7 @@
   .card.card--standard.card--media {
     margin-right: 5px;
     padding: 10px 5px;
+    background-color: unset;
   }
 
   .info-cards .card {
@@ -230,6 +231,7 @@
     height: 80%;
     width: 80%;
     margin-left: 10px;
+    margin-top: 5px;
   }
 
   .tabs .grid .grid__item.slider__slide .card__media .media {
