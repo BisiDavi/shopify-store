@@ -3079,4 +3079,7 @@ header.header {
   font-weight: bold;
 }
 
-
+/* slideshow */
+.mobile-view {
+  display: none;
+}

@@ -33,6 +33,11 @@
   }
 
   /* slideshow */
+
+  .mobile-view {
+    display: flex;
+  }
+
   .custom-slideshow.slideshow {
     margin: 15px;
   }
@@ -117,6 +122,8 @@
     flex-wrap: nowrap;
   }
 
+  /* info card */
+
   .card.card--standard.card--media {
     margin-right: 5px;
     padding: 10px 5px;
@@ -138,6 +145,7 @@
     margin-right: 5px;
   }
 
+  /* product collage */
   .product-collage.page-width {
     display: flex;
     flex-direction: column;
@@ -195,6 +203,8 @@
   .product-collage .products ul li .card.card--standard {
     padding: 0px;
   }
+
+  /* product tabs */
 
   .tabs .collection,
   .tabs .grid.product-grid {
