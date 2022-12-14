@@ -9,7 +9,7 @@
         assign collections = collections | sort: 'all_products_count'
       when 'date' or 'date_reversed'
         assign collections = collections | sort: 'published_at'
-    endcase
+    endcase 
 
     if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
       assign collections = collections | reverse
