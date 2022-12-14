@@ -9,11 +9,11 @@
   padding: 0px;
 }
 
-.product-collage .products ul li {
-  width: 100% !important;
-  max-width: 100% !important;
+.product-collage .products ul.product-grid li.grid__item {
+  width: 100%;
+  max-width: 100%;
   padding: 0px;
-  margin: 0px !important; 
+  margin: 0px;
 }
 
 .collage-banner {

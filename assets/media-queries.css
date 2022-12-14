@@ -238,6 +238,14 @@
     max-width: 100%;
   }
 
+  .product-collage.page-width .collection .product-grid {
+    height: unset;
+  }
+
+  #productCollage ul.product-grid li.grid__item {
+    margin: 10px 0px;
+  }
+
   .product-collage .collage-banner,
   .product-collage .collage-banner img {
     width: 100%;
