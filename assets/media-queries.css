@@ -350,6 +350,20 @@
     font-size: 18px;
   }
 
+  .collection .grid.product-grid {
+    overflow-x: scroll;
+    padding: 0px;
+    margin: 0px;
+    height: 340px;
+    width: 100%;
+    overflow-y: hidden;
+  }
+
+  .collection .slider-mobile-gutter .grid.product-grid li.grid__item {
+    box-shadow: none;
+    padding: 0px;
+  }
+
   /* footer */
   footer .footer__content-top {
     flex-direction: column;
