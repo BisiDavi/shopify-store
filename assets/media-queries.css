@@ -33,9 +33,42 @@
   }
 
   /* slideshow */
-
-  .mobile-view {
+  .mobile-slide-control {
     display: flex;
+    padding: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-slide-control .mobile-view {
+    width: 70%;
+    display: flex;
+    padding: 0px;
+  }
+
+  .mobile-slide-control .mobile-view li {
+    display: flex;
+    width: 40%;
+    border: 1px solid #e7e6e9;
+    height: 1px;
+  }
+
+  .control-count {
+    display: flex;
+    font-weight: bold;
+  }
+
+  .control-count span.active {
+    color: #678800;
+  }
+
+  .control-count .divider {
+    margin: 0px 3px;
+  }
+
+  button.slider-counter__link--active .mobile-view li.line {
+    border: 1px solid #95bf11;
   }
 
   .custom-slideshow.slideshow {

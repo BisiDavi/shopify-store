@@ -173,6 +173,20 @@
                     <a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
                   </div>
                 {%- endif -%}
+                <div class="mobile-slide-control">
+                  <ul class="mobile-view">
+                    {%- for block in section.blocks -%}
+                      <li class="line control--{{ section.settings.slider_visual }} link-{{ forloop.index }}"></li>
+                    {%- endfor -%}
+                  </ul>
+                  <div class="control-count">
+                    <span class="active">0{{ forloop.index }}</span>
+                    <span class="divider">
+                      /
+                    </span>
+                    0{{ forloop.length }}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -231,14 +245,6 @@
               </button>
             {%- endfor -%}
           </div>
-          <ul class="mobile-view">
-            {%- for block in section.blocks -%}
-              <li class="line"></li>
-              <span class="control-count">
-                {{ forloop.last | plus: 1 }}
-              </span>
-            {%- endfor -%}
-          </ul>
         {%- endif -%}
       </div>
       <button
@@ -273,6 +279,7 @@
       </div>
     </noscript>
   {%- endif -%}
+
 </slideshow-component>
 
 {%- if request.design_mode -%}
