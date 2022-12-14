@@ -264,15 +264,8 @@
     margin-top: 30px;
   }
 
-  .shopify-section .collection-tab .title li {
-    font-size: 15px;
-    display: flex;
-    width: 100%;
-  }
-
   .shopify-section .collection-tab .title {
     display: grid;
-    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     max-width: 100%;
     overflow-x: scroll;
@@ -283,6 +276,15 @@
   }
 
   .tabs .card-information .price .price__sale span {
+    font-size: 18px;
+  }
+
+  .shopify-section .collection-tab .title li {
+    display: none;
+  }
+
+  .shopify-section .collection-tab .title li:first-child {
+    display: flex;
     font-size: 18px;
   }
 
