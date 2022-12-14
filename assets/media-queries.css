@@ -262,6 +262,15 @@
 
   /* product tabs */
 
+  .tabs .collection .grid.product-grid {
+    height: unset;
+  }
+
+  .shopify-section.section .collection-tab {
+    padding: 0px;
+    margin: 0px;
+  }
+
   .tabs .collection,
   .tabs .grid.product-grid {
     width: 100%;
@@ -331,7 +340,7 @@
     grid-template-columns: repeat(3, 1fr);
     max-width: 100%;
     overflow-x: scroll;
-    height: 100px;
+    height: 50px;
     padding: 10px 0px;
     margin: 0px 0px 0px 20px;
     overflow: auto;
@@ -365,6 +374,11 @@
   }
 
   /* footer */
+  footer.section-footer-padding {
+    padding-top: 0px;
+    margin-top: 10px;
+  }
+
   footer .footer__content-top {
     flex-direction: column;
     padding: 0px 25px;
