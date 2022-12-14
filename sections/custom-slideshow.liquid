@@ -174,11 +174,11 @@
                   </div>
                 {%- endif -%}
                 <div class="mobile-slide-control">
-                  <ul class="mobile-view">
+                  {% comment %} <ul class="mobile-view mobile-counter-{{ forloop.index }}">
                     {%- for block in section.blocks -%}
-                      <li class="line control--{{ section.settings.slider_visual }} link-{{ forloop.index }}"></li>
+                      <li class="line link-{{ forloop.index }} "></li>
                     {%- endfor -%}
-                  </ul>
+                  </ul> {% endcomment %}
                   <div class="control-count">
                     <span class="active">0{{ forloop.index }}</span>
                     <span class="divider">
@@ -244,6 +244,7 @@
                 {%- endif -%}
               </button>
             {%- endfor -%}
+            
           </div>
         {%- endif -%}
       </div>
