@@ -417,4 +417,34 @@
   .footer label.field__label {
     left: 0px;
   }
+
+  /* product page */
+  .card-group.page-width {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+
+  /* product recommendation */
+  .product-recommendations .grid {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .product-recommendations .grid .card-wrapper {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  .product-recommendations .grid li.grid__item {
+    margin-right: 10px;
+  }
+
+  .product-recommendations .grid li.grid__item button {
+    margin-top: 15px;
+    width: 80%;
+    min-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0px auto;
+  }
 }
