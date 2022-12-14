@@ -116,13 +116,6 @@
     height: 550px;
     flex-wrap: nowrap;
   }
-  /* div#Slide-template--17206341140754__custom_slideshow-2,
-  div#Slide-template--17206341140754__custom_slideshow-3,
-  div#Slide-template--17206341140754__custom_slideshow-4,
-  div#Slide-template--17206341140754__custom_slideshow-5,
-  div#Slide-template--17206341140754__custom_slideshow-6 {
-    display: none;
-  } */
 
   .card.card--standard.card--media {
     margin-right: 5px;
