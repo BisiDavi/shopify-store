@@ -66,11 +66,11 @@ class CartItems extends HTMLElement {
         section: "cartSlider",
         selector: "#cartSlider",
       },
-      {
-        id: "main-cart-footer",
-        section: document.getElementById("main-cart-footer").dataset.id,
-        selector: ".js-contents",
-      },
+      // {
+      //   id: "main-cart-footer",
+      //   section: document.getElementById("main-cart-footer").dataset.id,
+      //   selector: ".js-contents",
+      // },
     ];
     console.log("sectionsArray", sectionsArray);
     return sectionsArray;
@@ -150,7 +150,9 @@ class CartItems extends HTMLElement {
         const errors =
           document.getElementById("cart-errors") ||
           document.getElementById("CartDrawer-CartErrors");
-        errors.textContent = window.cartStrings.error;
+        if (errors) {
+          errors.textContent = window.cartStrings.error;
+        }
         this.disableLoading();
       });
   }
