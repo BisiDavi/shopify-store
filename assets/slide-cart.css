@@ -121,8 +121,19 @@ a.cart-item {
   cursor: pointer;
 }
 
+.recommended-slider h3.card__heading a{
+  color:black;
+  width:100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .cart-view .js-contents a.cart-item{
   padding:10px 0px;
+}
+
+.recommended-slider #Slider-slide-cart.grid .card-information .price{
+  margin-top:-5px;
 }
 
 .price-overview button:hover {

@@ -12,7 +12,7 @@
   }
   .w-25 .feature-products .collection ul#Slider-slide-cart li.grid__item {
     margin-right: 20px;
-    width: 80%;
+    width: 70%;
   }
 
   .cart-slider slider-component.page-width {
@@ -42,7 +42,7 @@
     padding: 20px;
   }
 
-  .js-contents a.cart-item {
+   .w-25 .cart__items .js-contents a.cart-item {
     position: relative;
     height: 170px;
     padding-bottom: 0px;
@@ -497,5 +497,10 @@
     align-items: center;
     justify-content: center;
     margin: 20px auto 0px auto;
+  }
+
+  .recommended-slider ul#Slider-slide-cart li {
+    border: 1px solid #e7e6e9;
+    border-radius: 20px;
   }
 }
