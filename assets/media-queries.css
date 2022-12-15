@@ -46,7 +46,7 @@
     position: relative;
     height: 170px;
     padding-bottom: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
 
   .js-contents a.cart-item img {
