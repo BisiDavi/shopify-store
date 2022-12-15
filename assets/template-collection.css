@@ -23,6 +23,13 @@ ul#product-grid .grid__item {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .product-grid-container .collection ul#product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+  }
+}
+
 .collection .loading-overlay {
   top: 0;
   right: 0;
