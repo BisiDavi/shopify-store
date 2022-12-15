@@ -130,11 +130,15 @@
             {{ cart.total_price | money_with_currency }}
           </h2>
         </div>
-        <button>Secure Checkout →</button>
+            <button type="submit" id="checkout" name="checkout" {% if cart == empty %} disabled {% endif %} form="cart">Secure Checkout →</button>
       </div>
     </div>
   </div>
 </slide-cart>
+
+<script>
+          document.querySelector('#checkout').addEventListener('click', () => document.querySelector('#cart').submit());
+</script>
 
 {% schema %}
 {
