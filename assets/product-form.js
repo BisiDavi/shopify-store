@@ -7,14 +7,18 @@ if (!customElements.get("product-form")) {
         this.slider = document.querySelector(".cart-slider");
 
         this.form = this.querySelector("form");
-        this.form.querySelector("[name=id]").disabled = false;
-        this.form.addEventListener("submit", this.onSubmitHandler.bind(this));
-        this.cart =
-          document.querySelector("cart-notification") ||
-          document.querySelector("cart-drawer");
-        this.submitButton = this.querySelector('[type="submit"]');
-        if (document.querySelector("cart-drawer"))
-          this.submitButton.setAttribute("aria-haspopup", "dialog");
+        if (this.form) {
+          this.form.querySelector("[name=id]").disabled = false;
+          this.form.addEventListener("submit", this.onSubmitHandler.bind(this));
+          this.cart =
+            document.querySelector("cart-notification") ||
+            document.querySelector("cart-drawer") ||
+            document.querySelector("slide-cart");
+          this.submitButton = this.querySelector('[type="submit"]');
+          if (document.querySelector("cart-drawer")) {
+            this.submitButton.setAttribute("aria-haspopup", "dialog");
+          }
+        }
       }
 
       onSubmitHandler(evt) {

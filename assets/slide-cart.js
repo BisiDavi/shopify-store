@@ -2,7 +2,7 @@ class SlideCart extends HTMLElement {
   constructor() {
     super();
 
-    this.slider = document.getElementById("cart-slider");
+    this.slider = document.getElementById("cartSlider");
     this.closeButton = document.getElementById("closeButton");
     this.openButton = document.getElementById("cart-icon-bubble");
 
@@ -34,15 +34,21 @@ class SlideCart extends HTMLElement {
   }
 
   getSectionsToRender() {
-    return [
+    const slideCartSections = [
       {
         id: "cart-drawer",
         selector: "#CartDrawer",
       },
       {
+        id: "cart-slider",
+        selector: "#cartSlider",
+      },
+      {
         id: "cart-icon-bubble",
       },
     ];
+    console.log("slideCartSections", slideCartSections);
+    return slideCartSections;
   }
 
   renderContents(parsedState) {

@@ -3,7 +3,8 @@
   display: block;
 }
 
-button#checkout {
+button#checkout,
+.cart__warnings a {
   height: 40px;
 }
 
