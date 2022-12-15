@@ -72,7 +72,21 @@ if (!customElements.get("product-form")) {
             }
 
             this.error = false;
-            this.cart.renderContents(response);
+            const quickAddModal = this.closest("quick-add-modal");
+            if (quickAddModal) {
+              document.body.addEventListener(
+                "modalClosed",
+                () => {
+                  setTimeout(() => {
+                    this.cart.renderContents(response);
+                  });
+                },
+                { once: true }
+              );
+              quickAddModal.hide(true);
+            } else {
+              this.cart.renderContents(response);
+            }
           })
           .catch((e) => {
             console.error(e);
@@ -87,21 +101,6 @@ if (!customElements.get("product-form")) {
               "hidden"
             );
           });
-      }
-
-      getSectionsToRender() {
-        return [
-          {
-            id: "cart-icon-bubble",
-            section: "cart-icon-bubble",
-            selector: ".cart-icon-bubble",
-          },
-          {
-            id: "cartSlider",
-            section: "cartSlider",
-            selector: "#cartSlider",
-          },
-        ];
       }
 
       handleErrorMessage(errorMessage = false) {

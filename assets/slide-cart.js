@@ -29,7 +29,6 @@ class SlideCart extends HTMLElement {
 
   close() {
     this.slider.classList.remove("active");
-
     removeTrapFocus(this.activeElement);
   }
 
