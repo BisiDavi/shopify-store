@@ -2,6 +2,14 @@
   display: flex;
 }
 
+.item-price {
+  position: relative;
+}
+
+.group .item-price .loading-overlay {
+  padding-top: unset;
+}
+
 .cart-slider {
   display: none;
   flex-direction: row;

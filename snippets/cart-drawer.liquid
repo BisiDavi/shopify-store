@@ -9,7 +9,7 @@
 
 <style>
   .drawer {
-    visibility: true;
+    visibility: false;
   }
 </style>
 
@@ -294,7 +294,6 @@
                                 {% render 'icon-plus' %}
                               </button>
                             </quantity-input>
-
                             <cart-remove-button
                               id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
                               data-index="{{ item.index | plus: 1 }}"

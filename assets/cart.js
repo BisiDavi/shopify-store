@@ -86,6 +86,8 @@ class CartItems extends HTMLElement {
       sections_url: window.location.pathname,
     });
 
+    console.log("body", body);
+
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
       .then((response) => {
         return response.text();
@@ -119,7 +121,8 @@ class CartItems extends HTMLElement {
         this.updateLiveRegions(line, parsedState.item_count);
         const lineItem =
           document.getElementById(`CartItem-${line}`) ||
-          document.getElementById(`CartDrawer-Item-${line}`);
+          document.getElementById(`CartDrawer-Item-${line}`) ||
+          document.getElementById(`cartItem-${line}`);
         if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
           cartDrawerWrapper
             ? trapFocus(
@@ -187,6 +190,7 @@ class CartItems extends HTMLElement {
   }
 
   enableLoading(line) {
+    console.log("line", line);
     const mainCartItems =
       document.getElementById("main-cart-items") ||
       document.getElementById("CartDrawer-CartItems");
@@ -199,9 +203,15 @@ class CartItems extends HTMLElement {
       `#CartDrawer-Item-${line} .loading-overlay`
     );
 
-    [...cartItemElements, ...cartDrawerItemElements].forEach((overlay) =>
-      overlay.classList.remove("hidden")
+    const slideCartItemElements = this.querySelectorAll(
+      `#cartItem-${line} .loading-overlay`
     );
+
+    [
+      ...cartItemElements,
+      ...cartDrawerItemElements,
+      ...slideCartItemElements,
+    ].forEach((overlay) => overlay.classList.remove("hidden"));
 
     document.activeElement.blur();
     this.lineItemStatusElement.setAttribute("aria-hidden", false);

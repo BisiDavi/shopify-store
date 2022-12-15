@@ -1,11 +1,13 @@
 {{ 'slide-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
 <slide-cart>
   <div class="cart-slider" id="cartSlider">
     <div id="closeButton" class="w-75"></div>
     <div class="w-25">
       <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
-        <div class="cart">
+        <div class="cart ">
           <div class="cart-view">
             <div class="cart-item_count">
               <h2>Cart</h2>
@@ -20,7 +22,7 @@
                   {%- for item in cart.items -%}
                     <a
                       href="{{ item.url }}"
-                      id="cartItem{{ item.index | plus: 1 }}"
+                      id="cartItem-{{ item.index | plus: 1 }}"
                       class="cart-item">
                       <img
                         src="{{ item.image | image_url: width: 300 }}"
@@ -48,8 +50,9 @@
                                 value="{{ item.quantity }}"
                                 min="1"
                                 aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-                                id="Drawer-quantity-{{ item.index | plus: 1 }}"
-                                data-index="{{ item.index | plus: 1 }}" />
+                                id="Quantity-{{ item.index | plus: 1 }}"
+                                data-index="{{ item.index | plus: 1 }}" 
+                              >
                               <button
                                 class="quantity__button no-js-hidden plus"
                                 name="plus"
@@ -67,17 +70,12 @@
                                   focusable="false"
                                   class="spinner"
                                   viewBox="0 0 66 66"
-                                  xmlns="http://www.w3.org/2000/svg"></svg>
-                                  <circle
-                                    class="path"
-                                    fill="none"
-                                    stroke-width="6"
-                                    cx="33"
-                                    cy="33"
-                                    r="30"></circle>
-                              </svg>
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                              </div>
                             </div>
-                          </div>
                             <div class="amount">
                               {%- if item.original_line_price != item.final_line_price -%}
                               <h3>
@@ -116,6 +114,8 @@
                 {%- endif -%}
               </div>
             </div>
+            <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
+            <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
           </cart-items>
         </div>
         <div class="feature-products">
