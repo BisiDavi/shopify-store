@@ -94,6 +94,7 @@ a.cart-item {
   justify-content: center;
   font-weight: bold;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .price-overview button:hover {
