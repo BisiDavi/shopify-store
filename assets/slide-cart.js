@@ -51,7 +51,6 @@ class SlideCart extends HTMLElement {
       },
       {
         id: "cart-icon-bubble",
-        section: "cart-icon-bubble",
         selector: ".shopify-section",
       },
     ];
@@ -68,14 +67,6 @@ class SlideCart extends HTMLElement {
         parsedState.sections[section.id],
         section.selector
       );
-    });
-
-    setTimeout(() => {
-      this.querySelector("#CartDrawer-Overlay").addEventListener(
-        "click",
-        this.close.bind(this)
-      );
-      this.open();
     });
   }
 
@@ -103,10 +94,6 @@ class SlideCart extends HTMLElement {
     return new DOMParser()
       .parseFromString(html, "text/html")
       .querySelector(selector).innerHTML;
-  }
-
-  setActiveElement(element) {
-    this.activeElement = element;
   }
 }
 

@@ -10,14 +10,16 @@ if (!customElements.get("product-form")) {
         if (this.form) {
           this.form.querySelector("[name=id]").disabled = false;
           this.form.addEventListener("submit", this.onSubmitHandler.bind(this));
-          this.cart =
-            document.querySelector("cart-notification") ||
-            document.querySelector("cart-drawer") ||
-            document.querySelector("slide-cart");
-          this.submitButton = this.querySelector('[type="submit"]');
-          if (document.querySelector("cart-drawer")) {
-            this.submitButton.setAttribute("aria-haspopup", "dialog");
-          }
+        }
+        this.cart =
+          document.querySelector("cart-notification") ||
+          document.querySelector("cart-drawer") ||
+          document.querySelector("slide-cart");
+
+        console.log("this.cart", this.cart);
+        this.submitButton = this.querySelector('[type="submit"]');
+        if (document.querySelector("cart-drawer")) {
+          this.submitButton.setAttribute("aria-haspopup", "dialog");
         }
       }
 
@@ -47,6 +49,8 @@ if (!customElements.get("product-form")) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
+
+        console.log("config.body", config.body);
 
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
@@ -83,6 +87,21 @@ if (!customElements.get("product-form")) {
               "hidden"
             );
           });
+      }
+
+      getSectionsToRender() {
+        return [
+          {
+            id: "cart-icon-bubble",
+            section: "cart-icon-bubble",
+            selector: ".cart-icon-bubble",
+          },
+          {
+            id: "cartSlider",
+            section: "cartSlider",
+            selector: "#cartSlider",
+          },
+        ];
       }
 
       handleErrorMessage(errorMessage = false) {
