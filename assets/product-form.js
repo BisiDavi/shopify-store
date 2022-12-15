@@ -4,7 +4,7 @@ if (!customElements.get("product-form")) {
     class ProductForm extends HTMLElement {
       constructor() {
         super();
-        this.slider = document.querySelector(".cart-slider");
+        this.slider = document.getElementById("#cartSlider");
 
         this.form = this.querySelector("form");
         if (this.form) {

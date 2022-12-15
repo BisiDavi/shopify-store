@@ -46,7 +46,7 @@ class CartItems extends HTMLElement {
     const sectionsArray = [
       {
         id: "main-cart-items",
-      section: document.getElementById("main-cart-items").dataset.id,
+        section: document.getElementById("main-cart-items").dataset.id,
         selector: ".js-contents",
       },
       {
@@ -58,6 +58,10 @@ class CartItems extends HTMLElement {
         id: "cart-live-region-text",
         section: "cart-live-region-text",
         selector: ".shopify-section",
+      },
+      {
+        id: "cartSlider",
+        selector: "cartSlider",
       },
       {
         id: "main-cart-footer",

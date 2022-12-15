@@ -74,8 +74,8 @@ class SlideCart extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: "cart-slider",
-        selector: "cart-slider",
+        id: "cartSlider",
+        selector: "cartSlider",
       },
       {
         id: "cart-icon-bubble",
@@ -83,7 +83,7 @@ class SlideCart extends HTMLElement {
     ];
   }
 
-  getSectionInnerHTML(html, selector = ".shopify-section") {
+  getSectionInnerHTML(html, selector) {
     return new DOMParser()
       .parseFromString(html, "text/html")
       .querySelector(selector).innerHTML;
