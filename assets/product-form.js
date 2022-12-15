@@ -4,7 +4,7 @@ if (!customElements.get("product-form")) {
     class ProductForm extends HTMLElement {
       constructor() {
         super();
-        this.slider = document.getElementById("#cartSlider");
+        this.slider = document.getElementById("cartSlider");
 
         this.form = this.querySelector("form");
         if (this.form) {
@@ -69,7 +69,6 @@ if (!customElements.get("product-form")) {
 
             this.error = false;
             this.cart.renderContents(response);
-            this.slider.renderContents(response);
           })
           .catch((e) => {
             console.error(e);

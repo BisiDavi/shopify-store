@@ -63,7 +63,8 @@ class CartItems extends HTMLElement {
       },
       {
         id: "cartSlider",
-        selector: "cartSlider",
+        section: "cartSlider",
+        selector: "#cartSlider",
       },
       {
         id: "main-cart-footer",
