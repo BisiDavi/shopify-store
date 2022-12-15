@@ -91,6 +91,11 @@ class SlideCart extends HTMLElement {
         section: "cart-icon-bubble",
         selector: ".shopify-section",
       },
+      {
+        id: "priceOverview",
+        section: document.getElementById("priceOverview").dataset.id,
+        selector: ".price-overview",
+      },
     ];
   }
 

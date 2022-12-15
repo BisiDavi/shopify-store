@@ -123,12 +123,27 @@
           {% render 'recommendation-slider'
           , products: section.settings.collection.products %}
         </div>
-        <div class="price-overview">
+        <div class="price-overview" id="priceOverview" data-id="{{ section.id }}">
           <div class="subtotal">
             <h2>Subtotal</h2>
-            <h2>
-              {{ cart.total_price | money_with_currency }}
-            </h2>
+            <div class="subtotal">
+              <div class="loading-overlay hidden">
+                <div class="loading-overlay__spinner">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    class="spinner"
+                    viewBox="0 0 66 66"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                  </svg>
+                </div>
+              </div>
+              <h2>
+                {{ cart.total_price | money_with_currency }}
+              </h2>
+            </div>
           </div>
           <button type="submit" id="checkout" name="checkout" {% if cart == empty %} disabled {% endif %} form="cart">Secure Checkout →</button>
         </div>

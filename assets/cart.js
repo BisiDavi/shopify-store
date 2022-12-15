@@ -45,7 +45,7 @@ class CartItems extends HTMLElement {
   }
 
   getSectionsToRender() {
-    const sectionsArray = [
+    return [
       {
         id: "main-cart-items",
         section: document.getElementById("main-cart-items").dataset.id,
@@ -66,14 +66,17 @@ class CartItems extends HTMLElement {
         section: "cartSlider",
         selector: "#cartSlider",
       },
+      {
+        id: "priceOverview",
+        section: document.getElementById("priceOverview").dataset.id,
+        selector: ".price-overview",
+      },
       // {
       //   id: "main-cart-footer",
       //   section: document.getElementById("main-cart-footer").dataset.id,
       //   selector: ".js-contents",
       // },
     ];
-    console.log("sectionsArray", sectionsArray);
-    return sectionsArray;
   }
 
   updateQuantity(line, quantity, name) {
@@ -85,8 +88,6 @@ class CartItems extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
     });
-
-    console.log("body", body);
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
       .then((response) => {

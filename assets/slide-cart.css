@@ -2,7 +2,8 @@
   display: flex;
 }
 
-.item-price {
+.item-price,
+.subtotal {
   position: relative;
 }
 
