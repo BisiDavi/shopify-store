@@ -41,10 +41,13 @@ class SlideCart extends HTMLElement {
       },
       {
         id: "cart-slider",
+        section: "cartSlider",
         selector: "#cartSlider",
       },
       {
         id: "cart-icon-bubble",
+        section: "cart-icon-bubble",
+        selector: ".shopify-section",
       },
     ];
     console.log("slideCartSections", slideCartSections);
