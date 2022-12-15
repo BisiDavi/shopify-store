@@ -46,7 +46,7 @@
                                 type="number"
                                 name="updates[]"
                                 value="{{ item.quantity }}"
-                                min="0"
+                                min="1"
                                 aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                 id="Drawer-quantity-{{ item.index | plus: 1 }}"
                                 data-index="{{ item.index | plus: 1 }}" />
