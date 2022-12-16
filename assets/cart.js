@@ -4,8 +4,9 @@ class CartRemoveButton extends HTMLElement {
     this.addEventListener("click", (event) => {
       event.preventDefault();
       const cartItems =
-        this.closest("cart-items") ||
-        this.closest("slide-cart");
+      this.closest("cart-items") ||
+      this.closest("cart-drawer-items") ||
+      this.closest("slide-cart");
       cartItems.updateQuantity(this.dataset.index, 0);
     });
   }
@@ -64,7 +65,8 @@ class CartItems extends HTMLElement {
         id: "cart-live-region-text",
         section: "cart-live-region-text",
         selector: ".shopify-section",
-      },
+      }
+
       // {
       //   id: "main-cart-footer",
       //   section: document.getElementById("main-cart-footer").dataset.id,

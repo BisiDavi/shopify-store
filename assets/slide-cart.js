@@ -51,6 +51,11 @@ class SlideCart extends HTMLElement {
         id: "slide-cart",
         section: document.getElementById("slide-cart"),
         selector: ".cart-group",
+      },
+      {
+        id: "slide-cart-subtotal",
+        section: "slide-cart-subtotal",
+        selector: ".subtotal",
       }
     ];
   }
