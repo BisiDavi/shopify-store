@@ -15,7 +15,7 @@ class SlideCart extends HTMLElement {
   }
 
   open() {
-    this.slider.classList.add("active");
+    this.slider.classList.add("active", "animate");
 
     this.slider.addEventListener(
       "transitionend",
@@ -27,19 +27,19 @@ class SlideCart extends HTMLElement {
     );
   }
 
+  setActiveElement(element) {
+    this.activeElement = element;
+  }
+
   close() {
     this.slider.classList.remove("active");
     removeTrapFocus(this.activeElement);
   }
 
   getSectionsToRender() {
-    const slideCartSections = [
+   return [
       {
-        id: "cart-drawer",
-        selector: "#CartDrawer",
-      },
-      {
-        id: "cart-slider",
+        id: "cartSlider",
         section: "cartSlider",
         selector: "#cartSlider",
       },
@@ -48,21 +48,12 @@ class SlideCart extends HTMLElement {
         section: document.getElementById("main-cart-items").dataset.id,
         selector: ".js-contents",
       },
-      {
-        id: "cart-icon-bubble",
-        selector: ".shopify-section",
-      },
     ];
-    console.log("slideCartSections", slideCartSections);
-    return slideCartSections;
   }
 
   renderContents(parsedState) {
     this.getSectionsToRender().forEach((section) => {
-      const sectionElement = section.selector
-        ? document.querySelector(section.selector)
-        : document.getElementById(section.id);
-      sectionElement.innerHTML = this.getSectionInnerHTML(
+      document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(
         parsedState.sections[section.id],
         section.selector
       );
@@ -77,19 +68,19 @@ class SlideCart extends HTMLElement {
         selector: "#cartSlider",
       },
       {
-        id: "cart-icon-bubble",
-        section: "cart-icon-bubble",
-        selector: ".shopify-section",
+        id: "main-cart-items",
+        section: document.getElementById("main-cart-items"),
+        selector: ".js-contents",
       },
       {
         id: "priceOverview",
-        section: document.getElementById("priceOverview").dataset.id,
+        section: document.getElementById("priceOverview"),
         selector: ".price-overview",
       },
     ];
   }
 
-  getSectionInnerHTML(html, selector) {
+  getSectionInnerHTML(html, selector = ".shopify-section") {
     return new DOMParser()
       .parseFromString(html, "text/html")
       .querySelector(selector).innerHTML;

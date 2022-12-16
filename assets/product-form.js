@@ -11,12 +11,8 @@ if (!customElements.get("product-form")) {
           this.form.querySelector("[name=id]").disabled = false;
           this.form.addEventListener("submit", this.onSubmitHandler.bind(this));
         }
-        this.cart =
-          document.querySelector("cart-notification") ||
-          document.querySelector("cart-drawer") ||
-          document.querySelector("slide-cart");
+        this.cart = document.querySelector("slide-cart");
 
-        console.log("this.cart", this.cart);
         this.submitButton = this.querySelector('[type="submit"]');
         if (document.querySelector("cart-drawer")) {
           this.submitButton.setAttribute("aria-haspopup", "dialog");
@@ -72,21 +68,7 @@ if (!customElements.get("product-form")) {
             }
 
             this.error = false;
-            const quickAddModal = this.closest("quick-add-modal");
-            if (quickAddModal) {
-              document.body.addEventListener(
-                "modalClosed",
-                () => {
-                  setTimeout(() => {
-                    this.cart.renderContents(response);
-                  });
-                },
-                { once: true }
-              );
-              quickAddModal.hide(true);
-            } else {
-              this.cart.renderContents(response);
-            }
+            this.cart.renderContents(response);
           })
           .catch((e) => {
             console.error(e);
