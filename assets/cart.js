@@ -5,7 +5,6 @@ class CartRemoveButton extends HTMLElement {
       event.preventDefault();
       const cartItems =
         this.closest("cart-items") ||
-        this.closest("cart-drawer-items") ||
         this.closest("slide-cart");
       cartItems.updateQuantity(this.dataset.index, 0);
     });
@@ -57,19 +56,14 @@ class CartItems extends HTMLElement {
         selector: ".shopify-section",
       },
       {
-        id: "cart-live-region-text",
-        section: "cart-live-region-text",
+        id: "slide-cart-count",
+        section: "slide-cart-count",
         selector: ".shopify-section",
       },
       {
-        id: "cartSlider",
-        section: document.getElementById("cartSlider"),
-        selector: "#cartSlider",
-      },
-      {
-        id: "priceOverview",
-        section: document.getElementById("priceOverview"),
-        selector: ".price-overview",
+        id: "cart-live-region-text",
+        section: "cart-live-region-text",
+        selector: ".shopify-section",
       },
       // {
       //   id: "main-cart-footer",
@@ -91,6 +85,7 @@ class CartItems extends HTMLElement {
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
       .then((response) => {
+        response.json().then((d) => console.log('response-dt', d))
         return response.text();
       })
       .then((state) => {

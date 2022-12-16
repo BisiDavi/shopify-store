@@ -36,21 +36,6 @@ class SlideCart extends HTMLElement {
     removeTrapFocus(this.activeElement);
   }
 
-  getSectionsToRender() {
-   return [
-      {
-        id: "cartSlider",
-        section: "cartSlider",
-        selector: "#cartSlider",
-      },
-      {
-        id: "main-cart-items",
-        section: document.getElementById("main-cart-items").dataset.id,
-        selector: ".js-contents",
-      },
-    ];
-  }
-
   renderContents(parsedState) {
     this.getSectionsToRender().forEach((section) => {
       document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(
