@@ -65,6 +65,11 @@ class CartItems extends HTMLElement {
         id: "cart-live-region-text",
         section: "cart-live-region-text",
         selector: ".shopify-section",
+      },
+       {
+        id: "slide-cart-subtotal",
+        section: "slide-cart-subtotal",
+        selector: ".subtotal",
       }
 
       // {
@@ -84,6 +89,8 @@ class CartItems extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
     });
+
+    console.log('body',body,'name',name)
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
       .then((response) => {

@@ -85,6 +85,12 @@ cart-items {
   width: 100%;
 }
 
+.main-cart-view cart-items {
+  height: unset;
+  overflow-y: unset;
+  width: 100%;
+}
+
 a.cart-item {
   display: flex;
   padding: 15px 25px;
