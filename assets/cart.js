@@ -63,12 +63,12 @@ class CartItems extends HTMLElement {
       },
       {
         id: "cartSlider",
-        section: "cartSlider",
+        section: document.getElementById("cartSlider"),
         selector: "#cartSlider",
       },
       {
         id: "priceOverview",
-        section: document.getElementById("priceOverview").dataset.id,
+        section: document.getElementById("priceOverview"),
         selector: ".price-overview",
       },
       // {

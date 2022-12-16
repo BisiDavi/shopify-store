@@ -64,19 +64,17 @@ class SlideCart extends HTMLElement {
     return [
       {
         id: "cartSlider",
-        section: "cartSlider",
-        selector: "#cartSlider",
       },
       {
         id: "main-cart-items",
         section: document.getElementById("main-cart-items"),
         selector: ".js-contents",
       },
-      {
-        id: "priceOverview",
-        section: document.getElementById("priceOverview"),
-        selector: ".price-overview",
-      },
+      // {
+      //   id: "priceOverview",
+      //   section: document.getElementById("priceOverview"),
+      //   selector: ".price-overview",
+      // },
     ];
   }
 
