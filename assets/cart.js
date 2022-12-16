@@ -70,13 +70,12 @@ class CartItems extends HTMLElement {
         id: "slide-cart-subtotal",
         section: "slide-cart-subtotal",
         selector: ".subtotal",
-      }
-
-      // {
-      //   id: "main-cart-footer",
-      //   section: document.getElementById("main-cart-footer").dataset.id,
-      //   selector: ".js-contents",
-      // },
+      },
+      {
+        id: "main-cart-footer",
+        section: document.getElementById("main-cart-footer").dataset.id,
+        selector: ".js-contents",
+      },
     ];
   }
 
