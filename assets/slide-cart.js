@@ -63,22 +63,14 @@ class SlideCart extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: "cartSlider",
-      },
-      {
-        id: "main-cart-items",
-        section: document.getElementById("main-cart-items"),
-        selector: ".js-contents",
-      },
-      // {
-      //   id: "priceOverview",
-      //   section: document.getElementById("priceOverview"),
-      //   selector: ".price-overview",
-      // },
+        id: "slide-cart",
+        section: document.getElementById("slide-cart"),
+        selector: ".cart-group",
+      }
     ];
   }
 
-  getSectionInnerHTML(html, selector = ".shopify-section") {
+  getSectionInnerHTML(html, selector) {
     return new DOMParser()
       .parseFromString(html, "text/html")
       .querySelector(selector).innerHTML;
