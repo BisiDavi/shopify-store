@@ -4,8 +4,7 @@ class CartRemoveButton extends HTMLElement{
 
         this.addEventListener("click", (event) => {
             event.preventDefault();
-            const cartItems =
-            this.closest("cart-items");
+            const cartItems = this.closest("cart-items");
             cartItems.updateQuantity(this.dataset.index, 0);
         });
     }
@@ -16,6 +15,10 @@ customElements.define("cart-remove-button", CartRemoveButton)
 class CartItems extends HTMLElement{
     constructor(){
         super();
+
+        this.lineItemStatusElement =
+        document.getElementById("shopping-cart-line-item-status");
+  
 
         this.currentItemCount = Array.from(this.querySelectorAll('[name="updates[]"]'))
             .reduce((total, quantityInput) => total + parseInt(quantityInput.value),0); 
@@ -61,12 +64,7 @@ class CartItems extends HTMLElement{
             id: "slide-cart-subtotal",
             section: "slide-cart-subtotal",
             selector: ".subtotal",
-          },
-          {
-            id: "main-cart-footer",
-            section: document.getElementById("main-cart-footer").dataset.id,
-            selector: ".js-contents",
-          },
+          }
         ];
     }
 
@@ -91,17 +89,14 @@ class CartItems extends HTMLElement{
       .then((state) => {
         const parsedState = JSON.parse(state);
         this.classList.toggle("is-empty", parsedState.item_count === 0);
-        const cartDrawerWrapper = document.querySelector("cart-drawer");
         const cartFooter = document.getElementById("main-cart-footer");
 
-        if (cartFooter)
+        if (cartFooter){
           cartFooter.classList.toggle("is-empty", parsedState.item_count === 0);
-        if (cartDrawerWrapper)
-          cartDrawerWrapper.classList.toggle(
-            "is-empty",
-            parsedState.item_count === 0
-          );
-
+        }
+        if (cartDrawerWrapper){
+          cartDrawerWrapper.classList.toggle("is-empty", parsedState.item_count === 0);
+        }
         this.getSectionsToRender().forEach((section) => {
           const elementToReplace =
             document
@@ -115,10 +110,8 @@ class CartItems extends HTMLElement{
         });
 
         this.updateLiveRegions(line, parsedState.item_count);
-        const lineItem =
-          // document.getElementById(`CartItem-${line}`) ||
-          // document.getElementById(`CartDrawer-Item-${line}`) ||
-          document.getElementById(`cartItem-${line}`);
+        const lineItem = document.getElementById(`cartItem-${line}`);
+
         if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
           cartDrawerWrapper
             ? trapFocus(
@@ -143,14 +136,38 @@ class CartItems extends HTMLElement{
         this.querySelectorAll(".loading-overlay").forEach((overlay) =>
           overlay.classList.add("hidden")
         );
-        const errors =
-          document.getElementById("cart-errors") ||
-          document.getElementById("CartDrawer-CartErrors");
+        const errors = document.getElementById("cart-errors");
+
         if (errors) {
           errors.textContent = window.cartStrings.error;
         }
         this.disableLoading();
       });
+    }
+
+    updateLiveRegions(line, itemCount) {
+      if (this.currentItemCount === itemCount) {
+        const lineItemError = document.getElementById(`Line-item-error-${line}`);
+
+          const quantityElement = document.getElementById(`Quantity-${line}`);
+
+        lineItemError.querySelector(".cart-item__error-text").innerHTML =
+          window.cartStrings.quantityError.replace(
+            "[quantity]",
+            quantityElement.value
+          );
+      }
+  
+      this.currentItemCount = itemCount;
+      this.lineItemStatusElement.setAttribute("aria-hidden", true);
+  
+      const cartStatus = document.getElementById("cart-live-region-text");
+
+      cartStatus.setAttribute("aria-hidden", false);
+  
+      setTimeout(() => {
+        cartStatus.setAttribute("aria-hidden", true);
+      }, 1000);
     }
 
     getSectionInnerHTML(html, selector) {
@@ -162,34 +179,20 @@ class CartItems extends HTMLElement{
     enableLoading(line) {
         const mainCartItems =
           document.getElementById("main-cart-items") ||
-          // document.getElementById("CartDrawer-CartItems");
-        mainCartItems.classList.add("cart__items--disabled");
+          mainCartItems.classList.add("cart__items--disabled");
     
         const cartItemElements = this.querySelectorAll(
           `#cartItem-${line} .loading-overlay`
         );
-        const cartDrawerItemElements = this.querySelectorAll(
-          `#CartDrawer-Item-${line} .loading-overlay`
-        );
-    
-        // const slideCartItemElements = this.querySelectorAll(
-        //   `#cartItem-${line} .loading-overlay`
-        // );
-    
-        [
-          ...cartItemElements,
-          // ...cartDrawerItemElements,
-          // ...slideCartItemElements,
-        ].forEach((overlay) => overlay.classList.remove("hidden"));
+   
+        [...cartItemElements].forEach((overlay) => overlay.classList.remove("hidden"));
     
         document.activeElement.blur();
         this.lineItemStatusElement.setAttribute("aria-hidden", false);
     }
 
     disableLoading() {
-        const mainCartItems =
-          document.getElementById("main-cart-items") ||
-          // document.getElementById("CartDrawer-CartItems");
+        const mainCartItems = document.getElementById("main-cart-items");
         mainCartItems.classList.remove("cart__items--disabled");
     }
 }
