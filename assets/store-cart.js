@@ -71,6 +71,7 @@ class CartItems extends HTMLElement{
     }
 
     updateQuantity(line, quantity, name) {
+    console.log('line',line, "quantity",quantity, "name",name);
     this.enableLoading(line);
 
     const body = JSON.stringify({
@@ -115,8 +116,8 @@ class CartItems extends HTMLElement{
 
         this.updateLiveRegions(line, parsedState.item_count);
         const lineItem =
-          document.getElementById(`CartItem-${line}`) ||
-          document.getElementById(`CartDrawer-Item-${line}`) ||
+          // document.getElementById(`CartItem-${line}`) ||
+          // document.getElementById(`CartDrawer-Item-${line}`) ||
           document.getElementById(`cartItem-${line}`);
         if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
           cartDrawerWrapper
@@ -159,27 +160,26 @@ class CartItems extends HTMLElement{
     }
 
     enableLoading(line) {
-        console.log("line", line);
         const mainCartItems =
           document.getElementById("main-cart-items") ||
-          document.getElementById("CartDrawer-CartItems");
+          // document.getElementById("CartDrawer-CartItems");
         mainCartItems.classList.add("cart__items--disabled");
     
         const cartItemElements = this.querySelectorAll(
-          `#CartItem-${line} .loading-overlay`
+          `#cartItem-${line} .loading-overlay`
         );
         const cartDrawerItemElements = this.querySelectorAll(
           `#CartDrawer-Item-${line} .loading-overlay`
         );
     
-        const slideCartItemElements = this.querySelectorAll(
-          `#cartItem-${line} .loading-overlay`
-        );
+        // const slideCartItemElements = this.querySelectorAll(
+        //   `#cartItem-${line} .loading-overlay`
+        // );
     
         [
           ...cartItemElements,
-          ...cartDrawerItemElements,
-          ...slideCartItemElements,
+          // ...cartDrawerItemElements,
+          // ...slideCartItemElements,
         ].forEach((overlay) => overlay.classList.remove("hidden"));
     
         document.activeElement.blur();
@@ -189,7 +189,7 @@ class CartItems extends HTMLElement{
     disableLoading() {
         const mainCartItems =
           document.getElementById("main-cart-items") ||
-          document.getElementById("CartDrawer-CartItems");
+          // document.getElementById("CartDrawer-CartItems");
         mainCartItems.classList.remove("cart__items--disabled");
     }
 }
