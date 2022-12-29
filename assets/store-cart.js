@@ -51,9 +51,9 @@ class CartItems extends HTMLElement{
             selector: ".shopify-section",
           },
           {
-            id: "slide-cart-count",
-            section: "slide-cart-count",
-            selector: ".shopify-section",
+            id: "item-price",
+            section: "amount",
+            selector: ".amount",
           },
           {
             id: "cart-live-region-text",

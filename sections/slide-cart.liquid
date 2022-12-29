@@ -35,7 +35,7 @@
                             height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}" >
                           <div class="content">
                             <h4>{{ item.product.title | escape }}</h4>
-                            <div class="group">
+                            <div class="group" >
                               <div class="cart-item__quantity-wrapper">
                                 <quantity-input class="quantity">
                                   <button
@@ -64,7 +64,7 @@
                                   </button>
                                 </quantity-input>
                               </div>
-                              <div class="item-price">
+                              <div class="item-price" id="item-price">
                                 <div class="loading-overlay hidden">
                                   <div class="loading-overlay__spinner">
                                     <svg
@@ -78,20 +78,20 @@
                                     </svg>
                                   </div>
                                 </div>
-                                <div class="amount">
+                                <div class="amount" id="amount">
                                   {%- if item.original_line_price != item.final_line_price -%}
-                                  <h3>
+                                  <h4>
                                     {{ item.original_line_price | money }} X {{ item.quantity }}
-                                  </h3>
+                                  </h4>
                                   <span>
                                     <h3>
                                     = {{ item.final_line_price | money }}
                                     </h3>
                                   </span>
                                   {%- else -%}
-                                    <h3>
-                                      {{ item.original_line_price | money }}
-                                    </h3>
+                                    <h2>
+                                      {{ item.final_line_price | money }}
+                                    </h2>
                                   {%- endif -%}
                                 </div>
                               </div>

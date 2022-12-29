@@ -52,7 +52,11 @@ class SlideCart extends HTMLElement {
         section: document.getElementById("slide-cart"),
         selector: ".cart-group",
       },
-     
+      {
+        id: "cart-icon-bubble",
+        section: "cart-icon-bubble",
+        selector: ".shopify-section",
+      },
     ];
   }
 
