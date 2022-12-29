@@ -3083,9 +3083,3 @@ header.header {
 .mobile-slide-control {
   display: none;
 }
-
-/* sticky header */
-sticky-header.header-wrapper.color-accent-3.gradient.header-wrapper--border-bottom {
-  position: fixed;
-  width: 100%;
-}
