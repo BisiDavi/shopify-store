@@ -57,6 +57,11 @@ class SlideCart extends HTMLElement {
         section: "cart-icon-bubble",
         selector: ".shopify-section",
       },
+      {
+        id: "slide-cart-subtotal",
+        section: "slide-cart-subtotal",
+        selector: ".shopify-section",
+      },
     ];
   }
 
