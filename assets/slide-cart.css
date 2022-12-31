@@ -79,13 +79,13 @@
   width: 100%;
 }
 
-cart-items {
+.cart__contents {
   height: 35vh;
   overflow-y: scroll;
   width: 100%;
 }
 
-.main-cart-view cart-items {
+.main-cart-view .cart__contents {
   height: unset;
   overflow-y: unset;
   width: 100%;

@@ -16,7 +16,7 @@
               </div>
               <a href="{{ routes.cart_url }}">View cart</a>
             </div>
-            <cart-items>
+            {% comment %} <cart-items> {% endcomment %}
               <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
                 <div class="cart__items" id="slide-cart-items" data-id="{{ section.id }}">
                   <div class="js-contents">
@@ -96,7 +96,7 @@
                                 </div>
                               </div>
                               <div class="trash">
-                                <cart-remove-button
+                                <delete-cart-item-button
                                   class="cartRemove"
                                   id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
                                   data-index="{{ item.index | plus: 1 }}">
@@ -107,7 +107,7 @@
 
                                     {% render 'trash-icon' %}
                                   </button>
-                                </cart-remove-button>
+                                </delete-cart-item-button>
                               </div>
                             </div>
                           </div>
@@ -119,7 +119,7 @@
                 <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
                 <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
               </form>
-            </cart-items>
+            {% comment %} </cart-items> {% endcomment %}
           </div>
           <div class="feature-products">
             <h2>Recommended for you</h2>
