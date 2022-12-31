@@ -99,8 +99,8 @@ class SlideCart extends HTMLElement {
       },
       {
         id: "slide-cart-items",
-        section:  "slide-cart-items",
-        selector: ".js-contents",
+        section: document.getElementById("slide-cart-items").dataset.id,
+        selector: ".shopify-section",
       },
     ];
   }
