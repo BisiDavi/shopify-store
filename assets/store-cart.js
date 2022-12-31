@@ -60,6 +60,11 @@ class CartItems extends HTMLElement{
           section: document.getElementById("slide-cart-items").dataset.id,
           selector: ".js-contents",
         },
+        {
+          id: "slide-cart-items",
+          section: document.getElementById("slide-cart-items").dataset.id,
+          selector: ".cart-items",
+        },
       ];
       console.log('sections',sections)
       return sections
