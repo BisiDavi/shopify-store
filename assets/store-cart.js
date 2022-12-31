@@ -19,8 +19,6 @@ class CartItems extends HTMLElement{
       this.lineItemStatusElement =
       document.getElementById("shopping-cart-line-item-status");
 
-      this.cart = document.querySelector("slide-cart");
-
       this.currentItemCount = Array.from(this.querySelectorAll('[name="updates[]"]'))
           .reduce((total, quantityInput) => total + parseInt(quantityInput.value),0); 
 
@@ -59,12 +57,8 @@ class CartItems extends HTMLElement{
         ...cartItems,
         {
           id: "slide-cart-items",
-          section: "slide-cart",
-          selector:".js-sections",
-        }, {
-          id: "slide-cart-items",
-          section: "cart-items",
-          selector: "cart-item",
+          section: document.getElementById("slide-cart-items").dataset.id,
+          selector: ".js-contents",
         },
       ];
       console.log('sections',sections)
@@ -89,7 +83,6 @@ class CartItems extends HTMLElement{
     .then((response) => {
       response.json().then((d) => {
       console.log('response-dt', d)
-      this.cart.renderContents(response);
     });
     return response.text();
     })
