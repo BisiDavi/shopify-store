@@ -19,6 +19,7 @@ class CartItems extends HTMLElement{
       this.lineItemStatusElement =
       document.getElementById("shopping-cart-line-item-status");
 
+      this.cart = document.querySelector("slide-cart");
 
       this.currentItemCount = Array.from(this.querySelectorAll('[name="updates[]"]'))
           .reduce((total, quantityInput) => total + parseInt(quantityInput.value),0); 
@@ -57,20 +58,14 @@ class CartItems extends HTMLElement{
       const sections = [
         ...cartItems,
         {
-          id: "cart-icon-bubble",
-          section: "cart-icon-bubble",
-          selector: ".shopify-section",
-        },
-        {
-          id: "slide-cart-subtotal",
-          section: "slide-cart-subtotal",
-          selector: ".subtotal",
-        },
-        {
           id: "slide-cart-items",
-          section: document.getElementById("slide-cart-items").dataset.id,
-          selector: ".js-contents",
-        }
+          section: "slide-cart",
+          selector:".js-sections",
+        }, {
+          id: "slide-cart-items",
+          section: "cart-items",
+          selector: "cart-item",
+        },
       ];
       console.log('sections',sections)
       return sections
@@ -92,8 +87,11 @@ class CartItems extends HTMLElement{
 
   fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
     .then((response) => {
-      response.json().then((d) => console.log('response-dt', d))
-      return response.text();
+      response.json().then((d) => {
+      console.log('response-dt', d)
+      this.cart.renderContents(response);
+    });
+    return response.text();
     })
     .then((state) => {
       const parsedState = JSON.parse(state);
@@ -115,6 +113,7 @@ class CartItems extends HTMLElement{
           section.selector
         );
       });
+
 
       this.updateLiveRegions(line, parsedState.item_count);
       const lineItem = document.getElementById(`cartItem-${line}`) ||  document.getElementById(`CartItem-${line}`);

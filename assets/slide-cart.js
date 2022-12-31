@@ -37,6 +37,7 @@ class SlideCart extends HTMLElement {
   }
 
   renderContents(parsedState) {
+    console.log('parsedState',parsedState)
     this.getSectionsToRender().forEach((section) => {
       document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(
         parsedState.sections[section.id],

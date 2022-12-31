@@ -25,6 +25,7 @@
                         <a
                           href="{{ item.url }}"
                           id="cartItem-{{ item.index | plus: 1 }}"
+                          data-id="{{ item.index | plus : 1 }}"
                           class="cart-item">
                           <img
                             src="{{ item.image | image_url: width: 300 }}"
